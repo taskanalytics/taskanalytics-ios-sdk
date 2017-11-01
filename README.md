@@ -1,5 +1,4 @@
 ![Task Analytics](./task-analytics-logo.svg)
-<img src="./task-analytics-logo.svg">
 
 # Task Analytics iOS SDK
 

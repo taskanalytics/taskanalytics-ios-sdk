@@ -1,3 +1,6 @@
+![Task Analytics](./task-analytics-logo.svg.svg)
+<img src="./task-analytics-logo.svg.svg">
+
 # Task Analytics iOS SDK
 
 [![Version](https://img.shields.io/cocoapods/v/TaskAnalytics.svg?style=flat)](http://cocoapods.org/pods/TaskAnalytics)
@@ -82,7 +85,7 @@ Whether or not the Task Analytics will be displayed will be determined by the se
 
 ### Hide
 
-If you have views where you don't want to show Task Analytics, you can hide it using:
+If you have views in your app where you don't want to show Task Analytics, you can hide it using:
 
 ```objective-c
 [TaskAnalytics.sharedInstance hide];

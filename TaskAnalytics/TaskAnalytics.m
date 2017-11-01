@@ -127,7 +127,7 @@ int const kTADoneViewSize = 54;
     _consentViewVerticalDistance = points;
     _consentViewEdge = edge;
     
-    if (_consentGiven == false){
+    if (_consentGiven == false && _window.rootViewController == _consentViewController){
         
         [self moveConsentViewWithAnimation:true];
 
@@ -142,7 +142,7 @@ int const kTADoneViewSize = 54;
     _launcherViewVerticalDistance = verticalDistance;
     _launcherViewCorner = corner;
     
-    if (_consentGiven == true){
+    if (_consentGiven == true && _window.rootViewController == _launcherViewController){
         
         [self moveLauncherViewWithAnimation:true];
         

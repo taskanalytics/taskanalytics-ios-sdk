@@ -52,12 +52,16 @@ The consent button spans the full width of the screen. It can be placed in a ver
 [TaskAnalytics.sharedInstance setConsentButtonVerticalDistance:(float)verticalDistance fromEdge:(TAEdge)edge];
 ```
 
+If you run this method after the consent button is displayed, it will animate into the new position. This way, can you move it if it obstructs important content in your app.
+
 When the user clicks on the consent button, a full screen modal view will be displayed where the user is asked to accept or decline the use of Task Analytics. The user can close the modal view without answering. In that case, the consent button remains in place.
 
 
 #### Launcher button
 
 The launcher button is a round button showing your avatar. It can be placed a certain number of points on the horizontal and vertical distance from one of the four screen corners.
+
+If you run this method after the consent button is displayed, it will animate into the new position. This way, can you move it if it obstructs important content in your app.
 
 ```objective-c
 [TaskAnalytics.sharedInstance setLauncherButtonHorizontalDistance:(float)horizontalDistance verticalDistance:(float)verticalDistance fromCorner:(TACorner)corner];
@@ -78,7 +82,7 @@ Whether or not the Task Analytics will be displayed will be determined by the se
 
 ### Hide
 
-If you have a view where you don't want to show Task Analytics, you can hide it using:
+If you have views where you don't want to show Task Analytics, you can hide it using:
 
 ```objective-c
 [TaskAnalytics.sharedInstance hide];

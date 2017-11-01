@@ -1,4 +1,4 @@
-# TaskAnalytics iOS SDK
+# Task Analytics iOS SDK
 
 [![Version](https://img.shields.io/cocoapods/v/TaskAnalytics.svg?style=flat)](http://cocoapods.org/pods/TaskAnalytics)
 [![License](https://img.shields.io/cocoapods/l/TaskAnalytics.svg?style=flat)](http://cocoapods.org/pods/TaskAnalytics)
@@ -10,7 +10,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- iOS 10.0 or newer
+- iOS 10.0, or newer
 - Task Analytics ID, contact us at hello@taskanalytics.com to obtain one.
 
 ## Installation

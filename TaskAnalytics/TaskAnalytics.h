@@ -49,6 +49,7 @@ typedef NS_ENUM(NSInteger, TAEdge) {
 @property (nonatomic, weak) id <TaskAnalyticsDelegate> _Nullable delegate;
 @property (nonatomic, strong) NSURL* _Nullable serverURL;
 
+
 - (void)setupWithID:(nonnull NSString*)ID;
 - (void)setConsentButtonVerticalDistance:(float)verticalDistance fromEdge:(TAEdge)edge;
 - (void)setLauncherButtonHorizontalDistance:(float)horizontalDistance verticalDistance:(float)verticalDistance fromCorner:(TACorner)corner;

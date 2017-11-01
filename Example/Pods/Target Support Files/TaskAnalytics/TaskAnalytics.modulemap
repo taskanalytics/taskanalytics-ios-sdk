@@ -1,0 +1,6 @@
+framework module TaskAnalytics {
+  umbrella header "TaskAnalytics-umbrella.h"
+
+  export *
+  module * { export * }
+}

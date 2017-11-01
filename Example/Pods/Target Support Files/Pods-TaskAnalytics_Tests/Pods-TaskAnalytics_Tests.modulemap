@@ -1,0 +1,6 @@
+framework module Pods_TaskAnalytics_Tests {
+  umbrella header "Pods-TaskAnalytics_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

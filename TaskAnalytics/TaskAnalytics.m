@@ -113,7 +113,7 @@ int const kTADoneViewSize = 54;
     else{
         
         baseURL = [[NSURL URLWithString:@"http://ios-capture.taskanalytics.com/setup"] URLByAppendingPathComponent:ID];
-        baseURL = [NSURL URLWithString:@"http://localhost:3000/db"]; //Debug
+        //baseURL = [NSURL URLWithString:@"http://localhost:3000/db"]; //Debug
 
     }
     

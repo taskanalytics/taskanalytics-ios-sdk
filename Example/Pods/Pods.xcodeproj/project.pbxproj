@@ -7,37 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01FCAF9B07DCF6B40DD50895758E4247 /* TaskAnalytics-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8ACF08117BDF5A4C1377E3FD88C93 /* TaskAnalytics-dummy.m */; };
-		162533C13FA81F664067B1EC490F485F /* TAConsentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7E1DAD39D9375B4685BAA522E36C0A /* TAConsentButton.m */; };
-		1ABB0A0818CC5FB5826999E75059A4A1 /* TALauncherButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5D949173CFE842199FEC6C68C0413D /* TALauncherButton.m */; };
-		210F7764E93B7C46AC8D1B2F62F1ED23 /* TANotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B868086D10BC493388F0D5AEF0D613C /* TANotification.m */; };
-		252180691FB496F800636EB4 /* TAConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 252180681FB496F800636EB4 /* TAConstants.h */; };
-		2521806B1FB4979E00636EB4 /* TAConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2521806A1FB4979E00636EB4 /* TAConstants.m */; };
-		253B49671FB4945D00D4B1B8 /* TAUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 253B49651FB4945D00D4B1B8 /* TAUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		253B49681FB4945D00D4B1B8 /* TAUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 253B49661FB4945D00D4B1B8 /* TAUtils.m */; };
+		21FF10CD03DF140B086EC921875A7032 /* TACapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D1B5DBC50D0FB9680EC1B9FE53189F3 /* TACapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23352DDA29D3FC239B877A6CF0333640 /* TAUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A5B12EB65A1220C88B507E790DAA5732 /* TAUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27F29576EC50CDA13ADABCF68CD38AA7 /* Pods-TaskAnalytics_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F15845F0BE7780C3C54616B03AC5CB0B /* Pods-TaskAnalytics_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2BE83FFFBC7D4078B461B66D3F69878B /* TANotification.h in Headers */ = {isa = PBXBuildFile; fileRef = FA582B8F6DAD990369C64AABE0FEDB9A /* TANotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F027A8382D6FEB6F9247B626F4AA127 /* TAConsentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DB7F89E0268D503314CD9314503171 /* TAConsentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3372763AF1EB2D00016996E2190DE3EA /* TAConsentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8176ABEC78AE912B9B8091F009B5F2 /* TAConsentViewController.m */; };
-		358772D6252E610BDEDF29966AA6516C /* TaskAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = D95E3E74132A6C7A346A9890CF3D92BD /* TaskAnalytics.m */; };
-		51FFDA67A24F0049CBD0C1471FC4B4CC /* TAConsent.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6CC04108BA60DEA36D3F5947BC6CE7 /* TAConsent.m */; };
-		61FBC187B1E87F1E03AC918C27885B25 /* TACaptureWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6D3DBB2E53B029B40DF0F1E12C5D9A /* TACaptureWebViewController.m */; };
-		621E25FA8511F3B458E0897940F4274E /* TaskAnalytics-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D090BF6FADBA1F124CD660F43C2F71C5 /* TaskAnalytics-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65C91B75FDD6076D0E85971935156723 /* TALauncherButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC625176F8F5ACAE4917F13F3C89F12 /* TALauncherButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		689D77C761FCC65C344DA5A578C6C3A9 /* TACaptureWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC62429FDB7C147B4D4F48C98A8A99D2 /* TACaptureWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		697CC39CB2DF60CCA608B52F8CA8E154 /* TACapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 91E181E80E5A8E99EC64C6E571AA3D71 /* TACapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72C9EF1DA06F5F0A7FC54F6B8055585E /* TALauncherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC5FACBC09065E1ADE4FDAC8F656A0E /* TALauncherViewController.m */; };
-		8E835CDB62A3D3972D877569D07A10FD /* TALauncherViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 11F990EE595F7FCE0F241EDCD88AAF98 /* TALauncherViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9285096BFCA50CED24E812F131F29C49 /* TACapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E371264C486D9F0039BC827FD29137 /* TACapture.m */; };
+		2E255BF22B6924FD8E20EAC1EFD4FABE /* TAConsent.h in Headers */ = {isa = PBXBuildFile; fileRef = 461487C53FF52D1500D1E2260B5EE845 /* TAConsent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3276EC363AC5406211CF4E7E0C06AE1B /* TALauncherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5471863B558CC8A5E8194B9626C072 /* TALauncherViewController.m */; };
+		3B557A2E7CF000B2AB3CD5A2DFA53C0C /* TALauncherViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C6E19ABBA728CD9A5DDB3ABF333223E7 /* TALauncherViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		502345CA306FF6A9815CA8A68E15AC64 /* TAConsentButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0865A480CD66D9940F93689F06BACF /* TAConsentButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59DFAC48685E6962D9E19755E70DC31F /* TAConsentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D4CE8B7729E1F9022A9F0DDCE2E965 /* TAConsentViewController.m */; };
+		5A8CCAECDAE798503D1DCF782B328F0F /* TaskAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 591D6115E0C2C17336D29E67EB90DF1B /* TaskAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68FB0FBA879D238FE942F4EB9AA6135B /* TaskAnalytics-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E300CBA0F9180D0668C8FF16B1E6A4F /* TaskAnalytics-dummy.m */; };
+		6FE20C20A695FC9D7C46BE091255AECC /* TACaptureWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BF3A2F09567EDCFA9AD12F2FFB1D2E9 /* TACaptureWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		708DF38C1D54CF4163B8BBAB1CE45FD0 /* TANotification.h in Headers */ = {isa = PBXBuildFile; fileRef = AD408FFB13D8CEA244CA34830FE6E9B6 /* TANotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7ED1426E74484C499BBDE5ADA9846DA4 /* TACaptureWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CDDCBE9BDC29CD52028938CA64F9AE /* TACaptureWebViewController.m */; };
+		8A38B28FC708B8EA6066DAF7DB0C8EC8 /* TANotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FD89F8D478DE37F6E16769EB7462AAF5 /* TANotification.m */; };
+		8AE79EBA2F041DA991D566887561D8D7 /* TAConsentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD2F318160E5016E8F6625E28249B7AF /* TAConsentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C5548EF9B642FF9127096E63C3FFCEF /* TAUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 105E87ED57B20EE10AC35104AD54F0C7 /* TAUtils.m */; };
+		92BECE1AAFAB6B0ABEBB75D0919AF2FA /* TALauncherButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 726E732C1E2FA1172005A09F6C7B62DA /* TALauncherButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97D25D3A3CED3FA2FC038B9B57FD7FCB /* TALauncherButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CC86B550510B86EC9AEDFD5E73A11 /* TALauncherButton.m */; };
 		A0F6EA13248502D4DC18330A8FE495E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		A1C3E9F0918585FA7150164E1D05C018 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		A31D91988CE55D3FD5458C628BE6089A /* TAConsent.h in Headers */ = {isa = PBXBuildFile; fileRef = 47871374A843F719546215F76B99917A /* TAConsent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A558332947F0CC37702E1F181E5F5C4A /* Pods-TaskAnalytics_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1687A92316D192C6C4AA6A75F4A567 /* Pods-TaskAnalytics_Tests-dummy.m */; };
-		C6410994215E5D7AF0B975EF659FAECD /* TaskAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 10308347720AFDAB7F3F624FB7B9336B /* TaskAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51EE3061A14F85246B7625147F0CFE1 /* TaskAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 476A4E67D61F79AE021C5A681BCDF955 /* TaskAnalytics.m */; };
+		BBFBB17765C584F91352DC92167B1C13 /* TAConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = EC20D7CE2FCB0A1F131B1C037200B2F6 /* TAConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC13DEF203E3BBD94E697B43D670CBCD /* TaskAnalytics-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1302EE56F6AC0FDB8137341A2F38790 /* TaskAnalytics-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E29DA5BCC7B90D5F8398CE0C8DBD6ED9 /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F7CC6DD1460B989CFD45B02875A3CB27 /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E31DC9178F0D3672DA123E483D2DC3FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		E7F8966C0D61590687DE25718CC54526 /* TAConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 02902FCA79EA19D36492560F5F573B49 /* TAConstants.m */; };
 		E8632AFF5F828EC0D12D44439E33B5A2 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DAD9F6DC8F31E497B9515D75292DE /* Pods-Example-dummy.m */; };
-		FE43A0CDBF43AE3D6533D2C6280C9966 /* TAConsentButton.h in Headers */ = {isa = PBXBuildFile; fileRef = B4511AF69CFCE5528C0535339090E053 /* TAConsentButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E998D7C5A8FE223E3B2EAC7E037E29EA /* TAConsentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3541BA9F5F927705436DE1C732485AD3 /* TAConsentButton.m */; };
+		ECD7DD54943FF322301C5B9506A203BB /* TACapture.m in Sources */ = {isa = PBXBuildFile; fileRef = FF75AEA73FF8B788575CAF26144FBFC3 /* TACapture.m */; };
+		F1B95AE7C06E31A2C1564B39B8DF3B52 /* TAConsent.m in Sources */ = {isa = PBXBuildFile; fileRef = F62CEF513B5DAABC7A82EE9F33FCE060 /* TAConsent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,59 +51,59 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C5D949173CFE842199FEC6C68C0413D /* TALauncherButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TALauncherButton.m; sourceTree = "<group>"; };
-		0EF4C5664372D7172AB780BD14110837 /* TaskAnalytics.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TaskAnalytics.modulemap; sourceTree = "<group>"; };
-		10308347720AFDAB7F3F624FB7B9336B /* TaskAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TaskAnalytics.h; path = TaskAnalytics/TaskAnalytics.h; sourceTree = "<group>"; };
-		11F990EE595F7FCE0F241EDCD88AAF98 /* TALauncherViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TALauncherViewController.h; sourceTree = "<group>"; };
-		1B868086D10BC493388F0D5AEF0D613C /* TANotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TANotification.m; sourceTree = "<group>"; };
+		02902FCA79EA19D36492560F5F573B49 /* TAConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAConstants.m; sourceTree = "<group>"; };
+		105E87ED57B20EE10AC35104AD54F0C7 /* TAUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAUtils.m; sourceTree = "<group>"; };
+		1BF3A2F09567EDCFA9AD12F2FFB1D2E9 /* TACaptureWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TACaptureWebViewController.h; sourceTree = "<group>"; };
 		1F1687A92316D192C6C4AA6A75F4A567 /* Pods-TaskAnalytics_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaskAnalytics_Tests-dummy.m"; sourceTree = "<group>"; };
 		20C3DE2D7B20285FE5F2229C23DD6919 /* Pods-TaskAnalytics_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaskAnalytics_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		24DB7F89E0268D503314CD9314503171 /* TAConsentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAConsentViewController.h; sourceTree = "<group>"; };
-		252180681FB496F800636EB4 /* TAConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAConstants.h; sourceTree = "<group>"; };
-		2521806A1FB4979E00636EB4 /* TAConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAConstants.m; sourceTree = "<group>"; };
-		253B49651FB4945D00D4B1B8 /* TAUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAUtils.h; sourceTree = "<group>"; };
-		253B49661FB4945D00D4B1B8 /* TAUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAUtils.m; sourceTree = "<group>"; };
-		2FD14146AF8BA1529E8EF5C434DB9E59 /* TaskAnalytics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TaskAnalytics.xcconfig; sourceTree = "<group>"; };
-		40F8ACF08117BDF5A4C1377E3FD88C93 /* TaskAnalytics-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TaskAnalytics-dummy.m"; sourceTree = "<group>"; };
-		45DC4DD1F5D2A0A8D5A33E94DC29699C /* Pods-TaskAnalytics_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TaskAnalytics_Tests.modulemap"; sourceTree = "<group>"; };
-		47871374A843F719546215F76B99917A /* TAConsent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAConsent.h; sourceTree = "<group>"; };
+		3541BA9F5F927705436DE1C732485AD3 /* TAConsentButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAConsentButton.m; sourceTree = "<group>"; };
+		3B5471863B558CC8A5E8194B9626C072 /* TALauncherViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TALauncherViewController.m; sourceTree = "<group>"; };
+		45DC4DD1F5D2A0A8D5A33E94DC29699C /* Pods-TaskAnalytics_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TaskAnalytics_Tests.modulemap"; sourceTree = "<group>"; };
+		461487C53FF52D1500D1E2260B5EE845 /* TAConsent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAConsent.h; sourceTree = "<group>"; };
+		476A4E67D61F79AE021C5A681BCDF955 /* TaskAnalytics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TaskAnalytics.m; path = TaskAnalytics/TaskAnalytics.m; sourceTree = "<group>"; };
 		4FEC7A568B7E39B2D1DCDDF944006DD3 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		57F7453DE38C1576D981DCC9FC185FB3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DC5FACBC09065E1ADE4FDAC8F656A0E /* TALauncherViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TALauncherViewController.m; sourceTree = "<group>"; };
+		591D6115E0C2C17336D29E67EB90DF1B /* TaskAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TaskAnalytics.h; path = TaskAnalytics/TaskAnalytics.h; sourceTree = "<group>"; };
+		5D1B5DBC50D0FB9680EC1B9FE53189F3 /* TACapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TACapture.h; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		69E371264C486D9F0039BC827FD29137 /* TACapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TACapture.m; sourceTree = "<group>"; };
+		726E732C1E2FA1172005A09F6C7B62DA /* TALauncherButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TALauncherButton.h; sourceTree = "<group>"; };
 		756DAD9F6DC8F31E497B9515D75292DE /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
+		7A9CC86B550510B86EC9AEDFD5E73A11 /* TALauncherButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TALauncherButton.m; sourceTree = "<group>"; };
 		7D6D8BBAC15A0C448867F3B8343B6E59 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		7DFFB63FF4F431EA87D4C4BF80127B88 /* Pods-TaskAnalytics_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaskAnalytics_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		81BF47E73B187F361C4451D49FABF059 /* TaskAnalytics-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaskAnalytics-prefix.pch"; sourceTree = "<group>"; };
-		820FC766BAFB98D95D59D2F837EDF80F /* Pods_TaskAnalytics_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskAnalytics_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		820FC766BAFB98D95D59D2F837EDF80F /* Pods_TaskAnalytics_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaskAnalytics_Tests.framework; path = "Pods-TaskAnalytics_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D4CE8B7729E1F9022A9F0DDCE2E965 /* TAConsentViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAConsentViewController.m; sourceTree = "<group>"; };
+		8987BE0A9A33AC6EFF151D9F4F4FA272 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D4CECA7145D8656F9B5B7F95BC9F7EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91E181E80E5A8E99EC64C6E571AA3D71 /* TACapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TACapture.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8E300CBA0F9180D0668C8FF16B1E6A4F /* TaskAnalytics-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TaskAnalytics-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96AC231D65972F07594B6969AD139007 /* TaskAnalytics-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaskAnalytics-prefix.pch"; sourceTree = "<group>"; };
 		9D4D6351F946BE429963A37FC53331BC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1101C1406D461777585F5C4A791B8C7 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
+		A5B12EB65A1220C88B507E790DAA5732 /* TAUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAUtils.h; sourceTree = "<group>"; };
 		A9E16FF807516EEA718B89300C06CB71 /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AC8CA361368537D2EC7F6F357D80EED7 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF7E1DAD39D9375B4685BAA522E36C0A /* TAConsentButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAConsentButton.m; sourceTree = "<group>"; };
-		B4511AF69CFCE5528C0535339090E053 /* TAConsentButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAConsentButton.h; sourceTree = "<group>"; };
+		AC8CA361368537D2EC7F6F357D80EED7 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD408FFB13D8CEA244CA34830FE6E9B6 /* TANotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TANotification.h; sourceTree = "<group>"; };
+		B3C194E9AAB8AD4CD5B553D572A2A0DD /* TaskAnalytics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TaskAnalytics.xcconfig; sourceTree = "<group>"; };
 		B51F71A50B772F105DD05F777AAEB5FC /* Pods-TaskAnalytics_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaskAnalytics_Tests-resources.sh"; sourceTree = "<group>"; };
 		B71304CBFE16CC1B1835892A3BF79016 /* Pods-TaskAnalytics_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaskAnalytics_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B875E327B635E36FEECEAA38D2E8717B /* Pods-TaskAnalytics_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaskAnalytics_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD2F318160E5016E8F6625E28249B7AF /* TAConsentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAConsentViewController.h; sourceTree = "<group>"; };
+		C050F490835D75D125DF0E565021B6D7 /* TaskAnalytics.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TaskAnalytics.modulemap; sourceTree = "<group>"; };
 		C2CBE6433E66554D4089F15C19D467DC /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
-		C53D28C4D141B22E189182C21BDCD641 /* TaskAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TaskAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C53D28C4D141B22E189182C21BDCD641 /* TaskAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TaskAnalytics.framework; path = TaskAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C580E140400B18EFBF906C40028ACFC5 /* Pods-TaskAnalytics_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaskAnalytics_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D090BF6FADBA1F124CD660F43C2F71C5 /* TaskAnalytics-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaskAnalytics-umbrella.h"; sourceTree = "<group>"; };
-		D95E3E74132A6C7A346A9890CF3D92BD /* TaskAnalytics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TaskAnalytics.m; path = TaskAnalytics/TaskAnalytics.m; sourceTree = "<group>"; };
-		DA6CC04108BA60DEA36D3F5947BC6CE7 /* TAConsent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAConsent.m; sourceTree = "<group>"; };
-		DA8176ABEC78AE912B9B8091F009B5F2 /* TAConsentViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAConsentViewController.m; sourceTree = "<group>"; };
-		EA6D3DBB2E53B029B40DF0F1E12C5D9A /* TACaptureWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TACaptureWebViewController.m; sourceTree = "<group>"; };
-		EC62429FDB7C147B4D4F48C98A8A99D2 /* TACaptureWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TACaptureWebViewController.h; sourceTree = "<group>"; };
-		EDC625176F8F5ACAE4917F13F3C89F12 /* TALauncherButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TALauncherButton.h; sourceTree = "<group>"; };
-		EE2D21758692CC8603F4ABA1487314FE /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
+		C6E19ABBA728CD9A5DDB3ABF333223E7 /* TALauncherViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TALauncherViewController.h; sourceTree = "<group>"; };
+		C8CDDCBE9BDC29CD52028938CA64F9AE /* TACaptureWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TACaptureWebViewController.m; sourceTree = "<group>"; };
+		E1302EE56F6AC0FDB8137341A2F38790 /* TaskAnalytics-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaskAnalytics-umbrella.h"; sourceTree = "<group>"; };
+		EC20D7CE2FCB0A1F131B1C037200B2F6 /* TAConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAConstants.h; sourceTree = "<group>"; };
+		EE2D21758692CC8603F4ABA1487314FE /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
+		EF0865A480CD66D9940F93689F06BACF /* TAConsentButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAConsentButton.h; sourceTree = "<group>"; };
 		F15845F0BE7780C3C54616B03AC5CB0B /* Pods-TaskAnalytics_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaskAnalytics_Tests-umbrella.h"; sourceTree = "<group>"; };
+		F62CEF513B5DAABC7A82EE9F33FCE060 /* TAConsent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAConsent.m; sourceTree = "<group>"; };
 		F7CC6DD1460B989CFD45B02875A3CB27 /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
 		F852D4F7DE0DCE2F2B54C8FFCF9A3F39 /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		FA582B8F6DAD990369C64AABE0FEDB9A /* TANotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TANotification.h; sourceTree = "<group>"; };
+		FD89F8D478DE37F6E16769EB7462AAF5 /* TANotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TANotification.m; sourceTree = "<group>"; };
+		FF75AEA73FF8B788575CAF26144FBFC3 /* TACapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TACapture.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,28 +134,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		252180671FB496DF00636EB4 /* Headers */ = {
+		10F1195B5A02ABCA30C4F6CB4FA0592B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				252180681FB496F800636EB4 /* TAConstants.h */,
-				2521806A1FB4979E00636EB4 /* TAConstants.m */,
+				5D1B5DBC50D0FB9680EC1B9FE53189F3 /* TACapture.h */,
+				FF75AEA73FF8B788575CAF26144FBFC3 /* TACapture.m */,
+				461487C53FF52D1500D1E2260B5EE845 /* TAConsent.h */,
+				F62CEF513B5DAABC7A82EE9F33FCE060 /* TAConsent.m */,
+				EC20D7CE2FCB0A1F131B1C037200B2F6 /* TAConstants.h */,
+				02902FCA79EA19D36492560F5F573B49 /* TAConstants.m */,
+				AD408FFB13D8CEA244CA34830FE6E9B6 /* TANotification.h */,
+				FD89F8D478DE37F6E16769EB7462AAF5 /* TANotification.m */,
+				A5B12EB65A1220C88B507E790DAA5732 /* TAUtils.h */,
+				105E87ED57B20EE10AC35104AD54F0C7 /* TAUtils.m */,
 			);
-			path = Headers;
+			name = Classes;
+			path = TaskAnalytics/Classes;
 			sourceTree = "<group>";
 		};
-		3F096B39BDF94D4FDD6639B91306BD10 /* TaskAnalytics */ = {
+		119D2B9B06D133145D92D93AE8F0D205 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				252180671FB496DF00636EB4 /* Headers */,
-				10308347720AFDAB7F3F624FB7B9336B /* TaskAnalytics.h */,
-				D95E3E74132A6C7A346A9890CF3D92BD /* TaskAnalytics.m */,
-				86D144CE6496CD9D85BB3BBDC76AC0F0 /* Classes */,
-				ED04B183CFAE31ECF483267767554927 /* Controllers */,
-				F3AD88E84EF06E9F8A8BD5EBAF6AAE8C /* Support Files */,
-				F13028D20D91199ECAB0E5CCA3D5847F /* Views */,
+				1BF3A2F09567EDCFA9AD12F2FFB1D2E9 /* TACaptureWebViewController.h */,
+				C8CDDCBE9BDC29CD52028938CA64F9AE /* TACaptureWebViewController.m */,
+				BD2F318160E5016E8F6625E28249B7AF /* TAConsentViewController.h */,
+				86D4CE8B7729E1F9022A9F0DDCE2E965 /* TAConsentViewController.m */,
+				C6E19ABBA728CD9A5DDB3ABF333223E7 /* TALauncherViewController.h */,
+				3B5471863B558CC8A5E8194B9626C072 /* TALauncherViewController.m */,
+			);
+			name = Controllers;
+			path = TaskAnalytics/Controllers;
+			sourceTree = "<group>";
+		};
+		2831C6BC08A5196CA8568958B66EE10C /* TaskAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				591D6115E0C2C17336D29E67EB90DF1B /* TaskAnalytics.h */,
+				476A4E67D61F79AE021C5A681BCDF955 /* TaskAnalytics.m */,
+				10F1195B5A02ABCA30C4F6CB4FA0592B /* Classes */,
+				119D2B9B06D133145D92D93AE8F0D205 /* Controllers */,
+				38444E2E3E891FB7994F6AE8418B3FAA /* Support Files */,
+				8E98166F1CEBBB7D62E246E071C1133D /* Views */,
 			);
 			name = TaskAnalytics;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		38444E2E3E891FB7994F6AE8418B3FAA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8987BE0A9A33AC6EFF151D9F4F4FA272 /* Info.plist */,
+				C050F490835D75D125DF0E565021B6D7 /* TaskAnalytics.modulemap */,
+				B3C194E9AAB8AD4CD5B553D572A2A0DD /* TaskAnalytics.xcconfig */,
+				8E300CBA0F9180D0668C8FF16B1E6A4F /* TaskAnalytics-dummy.m */,
+				96AC231D65972F07594B6969AD139007 /* TaskAnalytics-prefix.pch */,
+				E1302EE56F6AC0FDB8137341A2F38790 /* TaskAnalytics-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TaskAnalytics";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -169,20 +205,16 @@
 			);
 			sourceTree = "<group>";
 		};
-		86D144CE6496CD9D85BB3BBDC76AC0F0 /* Classes */ = {
+		8E98166F1CEBBB7D62E246E071C1133D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				91E181E80E5A8E99EC64C6E571AA3D71 /* TACapture.h */,
-				69E371264C486D9F0039BC827FD29137 /* TACapture.m */,
-				47871374A843F719546215F76B99917A /* TAConsent.h */,
-				DA6CC04108BA60DEA36D3F5947BC6CE7 /* TAConsent.m */,
-				FA582B8F6DAD990369C64AABE0FEDB9A /* TANotification.h */,
-				1B868086D10BC493388F0D5AEF0D613C /* TANotification.m */,
-				253B49651FB4945D00D4B1B8 /* TAUtils.h */,
-				253B49661FB4945D00D4B1B8 /* TAUtils.m */,
+				EF0865A480CD66D9940F93689F06BACF /* TAConsentButton.h */,
+				3541BA9F5F927705436DE1C732485AD3 /* TAConsentButton.m */,
+				726E732C1E2FA1172005A09F6C7B62DA /* TALauncherButton.h */,
+				7A9CC86B550510B86EC9AEDFD5E73A11 /* TALauncherButton.m */,
 			);
-			name = Classes;
-			path = TaskAnalytics/Classes;
+			name = Views;
+			path = TaskAnalytics/Views;
 			sourceTree = "<group>";
 		};
 		8F9F835E93BF37CCC307CA5878DB11E4 /* Products */ = {
@@ -251,7 +283,7 @@
 		C1500BDC34F6ED81AD42FA7A0E5150FF /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3F096B39BDF94D4FDD6639B91306BD10 /* TaskAnalytics */,
+				2831C6BC08A5196CA8568958B66EE10C /* TaskAnalytics */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -262,46 +294,6 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		ED04B183CFAE31ECF483267767554927 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				EC62429FDB7C147B4D4F48C98A8A99D2 /* TACaptureWebViewController.h */,
-				EA6D3DBB2E53B029B40DF0F1E12C5D9A /* TACaptureWebViewController.m */,
-				24DB7F89E0268D503314CD9314503171 /* TAConsentViewController.h */,
-				DA8176ABEC78AE912B9B8091F009B5F2 /* TAConsentViewController.m */,
-				11F990EE595F7FCE0F241EDCD88AAF98 /* TALauncherViewController.h */,
-				5DC5FACBC09065E1ADE4FDAC8F656A0E /* TALauncherViewController.m */,
-			);
-			name = Controllers;
-			path = TaskAnalytics/Controllers;
-			sourceTree = "<group>";
-		};
-		F13028D20D91199ECAB0E5CCA3D5847F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B4511AF69CFCE5528C0535339090E053 /* TAConsentButton.h */,
-				AF7E1DAD39D9375B4685BAA522E36C0A /* TAConsentButton.m */,
-				EDC625176F8F5ACAE4917F13F3C89F12 /* TALauncherButton.h */,
-				0C5D949173CFE842199FEC6C68C0413D /* TALauncherButton.m */,
-			);
-			name = Views;
-			path = TaskAnalytics/Views;
-			sourceTree = "<group>";
-		};
-		F3AD88E84EF06E9F8A8BD5EBAF6AAE8C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				57F7453DE38C1576D981DCC9FC185FB3 /* Info.plist */,
-				0EF4C5664372D7172AB780BD14110837 /* TaskAnalytics.modulemap */,
-				2FD14146AF8BA1529E8EF5C434DB9E59 /* TaskAnalytics.xcconfig */,
-				40F8ACF08117BDF5A4C1377E3FD88C93 /* TaskAnalytics-dummy.m */,
-				81BF47E73B187F361C4451D49FABF059 /* TaskAnalytics-prefix.pch */,
-				D090BF6FADBA1F124CD660F43C2F71C5 /* TaskAnalytics-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/TaskAnalytics";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,22 +307,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0EDADE10D48DC1CCD44E855EF1DFB46 /* Headers */ = {
+		5204A738F75533696AB4A5A3755305CC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				697CC39CB2DF60CCA608B52F8CA8E154 /* TACapture.h in Headers */,
-				689D77C761FCC65C344DA5A578C6C3A9 /* TACaptureWebViewController.h in Headers */,
-				252180691FB496F800636EB4 /* TAConstants.h in Headers */,
-				A31D91988CE55D3FD5458C628BE6089A /* TAConsent.h in Headers */,
-				FE43A0CDBF43AE3D6533D2C6280C9966 /* TAConsentButton.h in Headers */,
-				2F027A8382D6FEB6F9247B626F4AA127 /* TAConsentViewController.h in Headers */,
-				65C91B75FDD6076D0E85971935156723 /* TALauncherButton.h in Headers */,
-				8E835CDB62A3D3972D877569D07A10FD /* TALauncherViewController.h in Headers */,
-				2BE83FFFBC7D4078B461B66D3F69878B /* TANotification.h in Headers */,
-				621E25FA8511F3B458E0897940F4274E /* TaskAnalytics-umbrella.h in Headers */,
-				C6410994215E5D7AF0B975EF659FAECD /* TaskAnalytics.h in Headers */,
-				253B49671FB4945D00D4B1B8 /* TAUtils.h in Headers */,
+				21FF10CD03DF140B086EC921875A7032 /* TACapture.h in Headers */,
+				6FE20C20A695FC9D7C46BE091255AECC /* TACaptureWebViewController.h in Headers */,
+				2E255BF22B6924FD8E20EAC1EFD4FABE /* TAConsent.h in Headers */,
+				502345CA306FF6A9815CA8A68E15AC64 /* TAConsentButton.h in Headers */,
+				8AE79EBA2F041DA991D566887561D8D7 /* TAConsentViewController.h in Headers */,
+				BBFBB17765C584F91352DC92167B1C13 /* TAConstants.h in Headers */,
+				92BECE1AAFAB6B0ABEBB75D0919AF2FA /* TALauncherButton.h in Headers */,
+				3B557A2E7CF000B2AB3CD5A2DFA53C0C /* TALauncherViewController.h in Headers */,
+				708DF38C1D54CF4163B8BBAB1CE45FD0 /* TANotification.h in Headers */,
+				DC13DEF203E3BBD94E697B43D670CBCD /* TaskAnalytics-umbrella.h in Headers */,
+				5A8CCAECDAE798503D1DCF782B328F0F /* TaskAnalytics.h in Headers */,
+				23352DDA29D3FC239B877A6CF0333640 /* TAUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,9 +341,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86CA0A06A46FDC904BB62E926F6A7080 /* Build configuration list for PBXNativeTarget "TaskAnalytics" */;
 			buildPhases = (
-				8A1E01F7FF7A0BD15F5BF6AE82DC08AE /* Sources */,
+				CFDA94D2D350BD8F6572CAA9374D9C89 /* Sources */,
 				659C621DA1EC0C8F7E0393E671174240 /* Frameworks */,
-				D0EDADE10D48DC1CCD44E855EF1DFB46 /* Headers */,
+				5204A738F75533696AB4A5A3755305CC /* Headers */,
 			);
 			buildRules = (
 			);
@@ -404,7 +396,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -442,22 +434,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A1E01F7FF7A0BD15F5BF6AE82DC08AE /* Sources */ = {
+		CFDA94D2D350BD8F6572CAA9374D9C89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9285096BFCA50CED24E812F131F29C49 /* TACapture.m in Sources */,
-				253B49681FB4945D00D4B1B8 /* TAUtils.m in Sources */,
-				61FBC187B1E87F1E03AC918C27885B25 /* TACaptureWebViewController.m in Sources */,
-				51FFDA67A24F0049CBD0C1471FC4B4CC /* TAConsent.m in Sources */,
-				162533C13FA81F664067B1EC490F485F /* TAConsentButton.m in Sources */,
-				3372763AF1EB2D00016996E2190DE3EA /* TAConsentViewController.m in Sources */,
-				2521806B1FB4979E00636EB4 /* TAConstants.m in Sources */,
-				1ABB0A0818CC5FB5826999E75059A4A1 /* TALauncherButton.m in Sources */,
-				72C9EF1DA06F5F0A7FC54F6B8055585E /* TALauncherViewController.m in Sources */,
-				210F7764E93B7C46AC8D1B2F62F1ED23 /* TANotification.m in Sources */,
-				01FCAF9B07DCF6B40DD50895758E4247 /* TaskAnalytics-dummy.m in Sources */,
-				358772D6252E610BDEDF29966AA6516C /* TaskAnalytics.m in Sources */,
+				ECD7DD54943FF322301C5B9506A203BB /* TACapture.m in Sources */,
+				7ED1426E74484C499BBDE5ADA9846DA4 /* TACaptureWebViewController.m in Sources */,
+				F1B95AE7C06E31A2C1564B39B8DF3B52 /* TAConsent.m in Sources */,
+				E998D7C5A8FE223E3B2EAC7E037E29EA /* TAConsentButton.m in Sources */,
+				59DFAC48685E6962D9E19755E70DC31F /* TAConsentViewController.m in Sources */,
+				E7F8966C0D61590687DE25718CC54526 /* TAConstants.m in Sources */,
+				97D25D3A3CED3FA2FC038B9B57FD7FCB /* TALauncherButton.m in Sources */,
+				3276EC363AC5406211CF4E7E0C06AE1B /* TALauncherViewController.m in Sources */,
+				8A38B28FC708B8EA6066DAF7DB0C8EC8 /* TANotification.m in Sources */,
+				68FB0FBA879D238FE942F4EB9AA6135B /* TaskAnalytics-dummy.m in Sources */,
+				B51EE3061A14F85246B7625147F0CFE1 /* TaskAnalytics.m in Sources */,
+				8C5548EF9B642FF9127096E63C3FFCEF /* TAUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,7 +539,7 @@
 		};
 		6612FF61A1E3E2391DFC7E3C1B81EB5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FD14146AF8BA1529E8EF5C434DB9E59 /* TaskAnalytics.xcconfig */;
+			baseConfigurationReference = B3C194E9AAB8AD4CD5B553D572A2A0DD /* TaskAnalytics.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -588,9 +580,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -598,21 +588,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -681,9 +665,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -691,20 +673,14 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -761,7 +737,7 @@
 		};
 		FA42DAD030A5FBA031C29D85BE6542F5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FD14146AF8BA1529E8EF5C434DB9E59 /* TaskAnalytics.xcconfig */;
+			baseConfigurationReference = B3C194E9AAB8AD4CD5B553D572A2A0DD /* TaskAnalytics.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

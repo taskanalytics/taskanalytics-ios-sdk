@@ -12,7 +12,9 @@
 
 #import "TACapture.h"
 #import "TAConsent.h"
+#import "TAConstants.h"
 #import "TANotification.h"
+#import "TAUtils.h"
 #import "TACaptureWebViewController.h"
 #import "TAConsentViewController.h"
 #import "TALauncherViewController.h"

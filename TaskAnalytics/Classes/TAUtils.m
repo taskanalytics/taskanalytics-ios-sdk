@@ -45,4 +45,39 @@ NSString* deviceName(){
     
 }
 
++ (NSError*)errorWithErrorType:(TAErrorType) errorType{
+    
+    
+    NSDictionary<NSErrorUserInfoKey,id>* userInfo;
+    
+    switch (errorType) {
+        case kTADidNotRunSetup:
+            
+            userInfo = @{NSLocalizedDescriptionKey: @"Setup has not been run yet."};
+            break;
+            
+        case kTACouldNotParseJSON:
+            
+            userInfo = @{NSLocalizedDescriptionKey: @"Could not parse setup JSON."};
+            break;
+            
+        case kTAShouldNotCollect:
+            
+            userInfo = @{NSLocalizedDescriptionKey: @"Should not collect."};
+            break;
+            
+        case kTAWaitToCollectAgain:
+            
+            userInfo = @{NSLocalizedDescriptionKey: @"Wait to collect again."};
+            break;
+
+        default:
+            break;
+    }
+    
+    
+    return [NSError errorWithDomain:kTAErrorDomain code:errorType userInfo:userInfo];
+    
+}
+
 @end

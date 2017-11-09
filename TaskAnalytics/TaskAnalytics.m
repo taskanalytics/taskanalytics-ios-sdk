@@ -24,6 +24,8 @@
 int const kTATriggerViewHeight = 64;
 int const kTADoneViewSize = 54;
 
+
+
 @interface TaskAnalytics()<TaskAnalyticsDelegate>
 {
     //Models from JSON setup
@@ -111,7 +113,7 @@ int const kTADoneViewSize = 54;
     else{
         
         baseURL = [[NSURL URLWithString:@"http://ios-capture.taskanalytics.com/setup"] URLByAppendingPathComponent:ID];
-        //serverURL = [NSURL URLWithString:@"http://localhost:3000/db"]; //Debug
+        baseURL = [NSURL URLWithString:@"http://localhost:3000/db"]; //Debug
 
     }
     
@@ -180,7 +182,13 @@ int const kTADoneViewSize = 54;
     
     if (_semaphore == nil){
         
-        //Fail silently
+        //Callback
+        if ([self.delegate respondsToSelector:(@selector(setupFailedWithError:))]){
+            
+            NSError* error = [TAUtils errorWithErrorType:kTADidNotRunSetup];
+            [self.delegate setupFailedWithError:error];
+        }
+        
         return;
         
     }
@@ -200,10 +208,9 @@ int const kTADoneViewSize = 54;
             
             _semaphore = nil;
             
-            // capture, consent and notification are not set, something went wrong in the JSON parsing, and we abort
-            //We don't check the avatar and avatar URL in NSUserDefault, because they might be there from before.
+            // If avatar, capture, consent and notification are not set, something went wrong in the JSON parsing, and we abort
             
-            if (_capture == nil || _consent == nil || _notification == nil){
+            if (_avatar == nil || _capture == nil || _consent == nil || _notification == nil){
                 
                 return; //Silent fail
             }
@@ -213,9 +220,8 @@ int const kTADoneViewSize = 54;
             
             if (_capture.collect == false){
                 return; //Silent fail
-
+                
             }
-            
             
             
             NSDate* date = (NSDate*)[NSUserDefaults.standardUserDefaults objectForKey:kTADateForParticiationDeclinedOrFinished];
@@ -237,6 +243,17 @@ int const kTADoneViewSize = 54;
 
                    [self showViewController];
                 
+                }
+                else{
+                    
+                    //Callback
+                    if ([self.delegate respondsToSelector:(@selector(setupFailedWithError:))]){
+                        
+                        NSError* error = [TAUtils errorWithErrorType:kTAWaitToCollectAgain];
+                        [self.delegate setupFailedWithError:error];
+                    }
+                    
+                    return;
                 }
                 
                 
@@ -306,7 +323,15 @@ int const kTADoneViewSize = 54;
         if (error != nil){
             
             dispatch_semaphore_signal(_semaphore);
-            return;  //Fail silently
+            
+            //Callback
+            if ([self.delegate respondsToSelector:(@selector(setupFailedWithError:))]){
+                [self.delegate setupFailedWithError:error];
+            }
+            
+            
+            
+            return;
             
         }
         
@@ -316,7 +341,15 @@ int const kTADoneViewSize = 54;
         if (jsonError != nil){
             
             dispatch_semaphore_signal(_semaphore);
-            return;  //Fail silently
+            
+            //Callback
+            if ([self.delegate respondsToSelector:(@selector(setupFailedWithError:))]){
+                [self.delegate setupFailedWithError:error];
+            }
+            
+            
+            
+            return;
             
         }
         
@@ -341,7 +374,15 @@ int const kTADoneViewSize = 54;
         if (_avatar == nil || _capture == nil || _consent == nil || _notification == nil){
             
             dispatch_semaphore_signal(_semaphore);
-            return; //Fail silently
+            
+            //Callback
+            if ([self.delegate respondsToSelector:(@selector(setupFailedWithError:))]){
+                
+                NSError* error = [TAUtils errorWithErrorType:kTACouldNotParseJSON];
+                [self.delegate setupFailedWithError:error];
+            }
+            
+            return;
         }
         
         
@@ -349,8 +390,15 @@ int const kTADoneViewSize = 54;
         
         if (_capture.collect == false){
             
+            //Callback
+            if ([self.delegate respondsToSelector:(@selector(setupFailedWithError:))]){
+                
+                NSError* error = [TAUtils errorWithErrorType:kTAShouldNotCollect];
+                [self.delegate setupFailedWithError:error];
+            }
+            
             dispatch_semaphore_signal(_semaphore);
-            return; //Fail silently
+            return;
         }
         
 

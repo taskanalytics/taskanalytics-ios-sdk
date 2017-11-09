@@ -15,3 +15,4 @@ NSString * const kTAAvatarURL = @"TA-avatar-url";
 NSString * const kTAAvatarImageData = @"TA-avatar-image-data";
 NSString * const kTADateForParticiationDeclinedOrFinished = @"TA-date-for-participation-declined-or-finished";
 NSString * const kTALocalNotification = @"TALocalNotification";
+NSString * const kTAErrorDomain = @"com.taskanalytics.errors";

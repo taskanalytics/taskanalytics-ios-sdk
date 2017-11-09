@@ -26,6 +26,7 @@ FOUNDATION_EXPORT const unsigned char TaskAnalyticsVersionString[];
 @optional -(void)consentDeclined;
 @optional -(void)captureFinished;
 @optional -(void)captureDestroyed;
+@optional -(void)setupFailedWithError:(NSError* _Nonnull)error;
 
 @end
 

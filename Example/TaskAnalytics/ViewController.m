@@ -184,4 +184,14 @@
     
 }
 
+-(void)setupFailedWithError:(NSError *)error{
+    
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Error!" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+    
+    [self presentViewController:alertController animated:true completion:nil];
+    
+}
+
 @end

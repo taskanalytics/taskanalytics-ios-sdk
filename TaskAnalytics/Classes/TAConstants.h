@@ -10,4 +10,4 @@ extern NSString * _Nonnull const kTAAvatarURL;
 extern NSString * _Nonnull const kTAAvatarImageData;
 extern NSString * _Nonnull const kTADateForParticiationDeclinedOrFinished;
 extern NSString * _Nonnull const kTALocalNotification;
-
+extern NSString * _Nonnull const kTAErrorDomain;

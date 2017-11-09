@@ -100,7 +100,7 @@ If you have views in your app where you don't want to show Task Analytics, you c
 
 ## Callbacks
 
-There are severall call backs available through ```TaskAnalyticsDelegate```. These will typically be used if you want to integrate Task Analytics with your own analytics tools.
+There are severall call backs available through ```TaskAnalyticsDelegate```. These will typically be used if you want to integrate Task Analytics with your own analytics tools, or if you need to debug.
 
 - consentButtonPressed
 - closeButtonPressed
@@ -109,6 +109,7 @@ There are severall call backs available through ```TaskAnalyticsDelegate```. The
 - consentDeclined
 - captureFinished
 - captureDestroyed
+- setupFailedWithError:(NSError\*)error
 
 
 ## Local push notifications

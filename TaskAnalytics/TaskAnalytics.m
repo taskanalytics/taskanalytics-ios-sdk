@@ -920,7 +920,7 @@ int const kTADoneViewSize = 54;
 }
 
 
--(void)captureDestroy{
+-(void)captureDestroyed{
     
     [self setDateForParticiationDeclinedOrFinished];
     
@@ -936,8 +936,8 @@ int const kTADoneViewSize = 54;
     
     
     //Callback
-    if ([self.delegate respondsToSelector:(@selector(captureDestroy))]){
-        [self.delegate captureDestroy];
+    if ([self.delegate respondsToSelector:(@selector(captureDestroyed))]){
+        [self.delegate captureDestroyed];
     }
     
     

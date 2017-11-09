@@ -178,9 +178,9 @@
     
 }
 
--(void)captureDestroy{
+-(void)captureDestroyed{
     
-    NSLog(@"Capture destroy");
+    NSLog(@"Capture destroyed");
     
 }
 

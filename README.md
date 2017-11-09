@@ -108,6 +108,7 @@ There are severall call backs available through ```TaskAnalyticsDelegate```. The
 - consentAccepted
 - consentDeclined
 - captureFinished
+- captureDestroyed
 
 
 ## Local push notifications

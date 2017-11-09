@@ -69,7 +69,7 @@
     
     if (isCaptureFinish == true) {
         
-        [self.delegate captureDestroy];
+        [self.delegate captureDestroyed];
         
     }
     else{
@@ -109,7 +109,7 @@
         }
         else if ([message.body isEqualToString:@"onCaptureDestroy"]){
             
-            [self.delegate captureDestroy];
+            [self.delegate captureDestroyed];
             
         }
     }

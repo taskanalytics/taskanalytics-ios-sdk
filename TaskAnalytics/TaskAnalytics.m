@@ -16,6 +16,8 @@
 #import "TAConsent.h"
 #import "TANotification.h"
 
+#import <sys/utsname.h>
+
 
 NSString * _Nonnull const kTAUUID = @"TA-UUID";
 NSString * _Nonnull const kTAAvatarURL = @"TA-avatar-url";
@@ -54,6 +56,8 @@ int const kTADoneViewSize = 54;
     TACorner _launcherViewCorner;
     
     
+    
+    
 }
 @end
 
@@ -71,6 +75,15 @@ int const kTADoneViewSize = 54;
     
 }
 
+
+NSString* deviceName(){
+    
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    
+    return [NSString stringWithCString:systemInfo.machine
+                              encoding:NSUTF8StringEncoding];
+}
 
 #pragma mark - Public methods
 
@@ -109,11 +122,29 @@ int const kTADoneViewSize = 54;
     }
     else{
         
-        serverURL = [[[NSURL URLWithString:@"http://ios-capture.taskanalytics.com/setup"] URLByAppendingPathComponent:ID] URLByAppendingPathComponent:UUID];
-        //serverURL = [NSURL URLWithString:@"http://localhost:3000/db"]; //Debug 
-        
+        serverURL = [[NSURL URLWithString:@"http://ios-capture.taskanalytics.com/setup"] URLByAppendingPathComponent:ID];
+        //serverURL = [NSURL URLWithString:@"http://localhost:3000/db"]; //Debug
+
     }
+        
     
+    
+    NSURLComponents* components = [NSURLComponents componentsWithURL:serverURL resolvingAgainstBaseURL:false];
+    
+    //Create query items
+    
+    NSString* device = deviceName();
+    NSString* os = [NSString stringWithFormat:@"%@ %@", UIDevice.currentDevice.systemName, UIDevice.currentDevice.systemVersion];
+    
+    
+    NSURLQueryItem* deviceQueryItem = [NSURLQueryItem queryItemWithName:@"device" value:device];
+    NSURLQueryItem* osQueryItem = [NSURLQueryItem queryItemWithName:@"os" value:os];
+    NSURLQueryItem* UUIDQueryItem = [NSURLQueryItem queryItemWithName:@"uuid" value:UUID];
+    
+    components.queryItems = @[deviceQueryItem, osQueryItem, UUIDQueryItem];
+    
+    
+    serverURL = [components URL];
     
     
     [self loadJSONFromServerURL:serverURL];
@@ -283,6 +314,7 @@ int const kTADoneViewSize = 54;
 
 
 #pragma mark - Private methods
+
 
 
 - (void)loadJSONFromServerURL:(NSURL *)serverURL {
@@ -531,7 +563,7 @@ int const kTADoneViewSize = 54;
         }
         else{
             
-            //This is the first time its displayed, so we move it into place, using a mask on the window
+            //This is the first time it's displayed, so we move it into place, using a mask on the window
             
             _window.frame = frame;
             _window.layer.masksToBounds = true;

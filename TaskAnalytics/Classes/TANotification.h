@@ -14,4 +14,7 @@
 @property (nonatomic, strong, nonnull) NSString * body;
 @property (nonatomic, assign) int timeout;
 
+- (id _Nullable)initWithDictionary:(NSDictionary* _Nonnull) dictionary;
+
+
 @end

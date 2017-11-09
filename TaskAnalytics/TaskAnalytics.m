@@ -12,6 +12,7 @@
 #import "TALauncherViewController.h"
 #import "TACaptureWebViewController.h"
 
+#import "TAAvatar.h"
 #import "TACapture.h"
 #import "TAConsent.h"
 #import "TANotification.h"
@@ -26,6 +27,7 @@ int const kTADoneViewSize = 54;
 @interface TaskAnalytics()<TaskAnalyticsDelegate>
 {
     //Models from JSON setup
+    TAAvatar* _avatar;
     TACapture* _capture;
     TAConsent* _consent;
     TANotification* _notification;
@@ -326,50 +328,21 @@ int const kTADoneViewSize = 54;
         //////////////////
         
         
-        NSNumber* captureCollect =                  dictionary[@"setup"][@"capture"][@"collect"];
-        NSNumber* captureExcludeDays =              dictionary[@"setup"][@"capture"][@"excludeDays"];
-        NSString* captureTitle =                    dictionary[@"setup"][@"capture"][@"title"];
-        NSURL* captureURL = [NSURL URLWithString:   dictionary[@"setup"][@"capture"][@"url"]];
-        
-        NSString* consentTitle =                    dictionary[@"setup"][@"consent"][@"title"];
+        _avatar = [[TAAvatar alloc] initWithDictionary:dictionary[@"setup"][@"avatar"]];
+        _capture = [[TACapture alloc] initWithDictionary:dictionary[@"setup"][@"capture"]];
+        _consent = [[TAConsent alloc] initWithDictionary:dictionary[@"setup"][@"consent"]];
+        _notification = [[TANotification alloc] initWithDictionary:dictionary[@"setup"][@"notification"]];
 
-        NSString* notificationBody =                dictionary[@"setup"][@"notification"][@"body"];
-        NSNumber* notificationTimeout =             dictionary[@"setup"][@"notification"][@"timeout"];
-        NSString* notificationTitle =               dictionary[@"setup"][@"notification"][@"title"];
         
-        //Find the correct URL based on screen scale
-        NSString* scale = [NSString stringWithFormat:@"%ix", (int)[UIScreen.mainScreen scale]];
-        NSURL* avatarURL = [NSURL URLWithString:    dictionary[@"setup"][@"avatar"][@"src"][scale]];
 
         
         // Check that all values are present
         
-        if (captureCollect == nil|| captureExcludeDays == nil  || captureTitle == nil || captureURL == nil ||
-            consentTitle == nil ||
-            notificationBody == nil || notificationTimeout == nil || notificationTitle == nil ||
-            avatarURL == nil){
+        if (_avatar == nil || _capture == nil || _consent == nil || _notification == nil){
             
             dispatch_semaphore_signal(_semaphore);
             return; //Fail silently
         }
-        
-        
-        
-        //Create objects
-        
-        _capture = [[TACapture alloc] init];
-        _capture.collect = [captureCollect boolValue];
-        _capture.excludeDays = [captureExcludeDays intValue];
-        _capture.title = captureTitle;
-        _capture.url = captureURL;
-        
-        _consent = [[TAConsent alloc] init];
-        _consent.title = consentTitle;
-        
-        _notification = [[TANotification alloc] init];
-        _notification.body = notificationBody;
-        _notification.title = notificationTitle;
-        _notification.timeout = [notificationTimeout intValue];
         
         
         //Check if we should collect
@@ -398,16 +371,16 @@ int const kTADoneViewSize = 54;
         
         //Check if the image URL has changed. If so, download the new image
         
-        if ([[NSUserDefaults.standardUserDefaults URLForKey:kTAAvatarURL] isEqual:avatarURL] == false){
+        if ([[NSUserDefaults.standardUserDefaults URLForKey:kTAAvatarURL] isEqual:_avatar.url] == false){
             
-            [[NSURLSession.sharedSession dataTaskWithURL:avatarURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            [[NSURLSession.sharedSession dataTaskWithURL:_avatar.url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                 
                 //Check to see if we have downloaded an actual image
                 if ([UIImage imageWithData:data] != nil){
                     
                     //Save URL and image data to NSUserDefaults
                     [NSUserDefaults.standardUserDefaults setObject:data forKey:kTAAvatarImageData];
-                    [NSUserDefaults.standardUserDefaults setURL:avatarURL forKey:kTAAvatarURL];
+                    [NSUserDefaults.standardUserDefaults setURL:_avatar.url forKey:kTAAvatarURL];
                     [NSUserDefaults.standardUserDefaults synchronize];
                     
                     dispatch_semaphore_signal(_semaphore);

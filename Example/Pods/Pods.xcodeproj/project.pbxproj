@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		21FF10CD03DF140B086EC921875A7032 /* TACapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D1B5DBC50D0FB9680EC1B9FE53189F3 /* TACapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23352DDA29D3FC239B877A6CF0333640 /* TAUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A5B12EB65A1220C88B507E790DAA5732 /* TAUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		252180721FB49F0300636EB4 /* TAAvatar.h in Headers */ = {isa = PBXBuildFile; fileRef = 252180701FB49F0300636EB4 /* TAAvatar.h */; };
+		252180731FB49F0300636EB4 /* TAAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 252180711FB49F0300636EB4 /* TAAvatar.m */; };
 		27F29576EC50CDA13ADABCF68CD38AA7 /* Pods-TaskAnalytics_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F15845F0BE7780C3C54616B03AC5CB0B /* Pods-TaskAnalytics_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E255BF22B6924FD8E20EAC1EFD4FABE /* TAConsent.h in Headers */ = {isa = PBXBuildFile; fileRef = 461487C53FF52D1500D1E2260B5EE845 /* TAConsent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3276EC363AC5406211CF4E7E0C06AE1B /* TALauncherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5471863B558CC8A5E8194B9626C072 /* TALauncherViewController.m */; };
@@ -56,9 +58,11 @@
 		1BF3A2F09567EDCFA9AD12F2FFB1D2E9 /* TACaptureWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TACaptureWebViewController.h; sourceTree = "<group>"; };
 		1F1687A92316D192C6C4AA6A75F4A567 /* Pods-TaskAnalytics_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaskAnalytics_Tests-dummy.m"; sourceTree = "<group>"; };
 		20C3DE2D7B20285FE5F2229C23DD6919 /* Pods-TaskAnalytics_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaskAnalytics_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		252180701FB49F0300636EB4 /* TAAvatar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAAvatar.h; sourceTree = "<group>"; };
+		252180711FB49F0300636EB4 /* TAAvatar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAAvatar.m; sourceTree = "<group>"; };
 		3541BA9F5F927705436DE1C732485AD3 /* TAConsentButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAConsentButton.m; sourceTree = "<group>"; };
 		3B5471863B558CC8A5E8194B9626C072 /* TALauncherViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TALauncherViewController.m; sourceTree = "<group>"; };
-		45DC4DD1F5D2A0A8D5A33E94DC29699C /* Pods-TaskAnalytics_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TaskAnalytics_Tests.modulemap"; sourceTree = "<group>"; };
+		45DC4DD1F5D2A0A8D5A33E94DC29699C /* Pods-TaskAnalytics_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TaskAnalytics_Tests.modulemap"; sourceTree = "<group>"; };
 		461487C53FF52D1500D1E2260B5EE845 /* TAConsent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAConsent.h; sourceTree = "<group>"; };
 		476A4E67D61F79AE021C5A681BCDF955 /* TaskAnalytics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TaskAnalytics.m; path = TaskAnalytics/TaskAnalytics.m; sourceTree = "<group>"; };
 		4FEC7A568B7E39B2D1DCDDF944006DD3 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,33 +74,33 @@
 		7A9CC86B550510B86EC9AEDFD5E73A11 /* TALauncherButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TALauncherButton.m; sourceTree = "<group>"; };
 		7D6D8BBAC15A0C448867F3B8343B6E59 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		7DFFB63FF4F431EA87D4C4BF80127B88 /* Pods-TaskAnalytics_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaskAnalytics_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		820FC766BAFB98D95D59D2F837EDF80F /* Pods_TaskAnalytics_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaskAnalytics_Tests.framework; path = "Pods-TaskAnalytics_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		820FC766BAFB98D95D59D2F837EDF80F /* Pods_TaskAnalytics_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskAnalytics_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D4CE8B7729E1F9022A9F0DDCE2E965 /* TAConsentViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAConsentViewController.m; sourceTree = "<group>"; };
 		8987BE0A9A33AC6EFF151D9F4F4FA272 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D4CECA7145D8656F9B5B7F95BC9F7EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E300CBA0F9180D0668C8FF16B1E6A4F /* TaskAnalytics-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TaskAnalytics-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96AC231D65972F07594B6969AD139007 /* TaskAnalytics-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaskAnalytics-prefix.pch"; sourceTree = "<group>"; };
 		9D4D6351F946BE429963A37FC53331BC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1101C1406D461777585F5C4A791B8C7 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
 		A5B12EB65A1220C88B507E790DAA5732 /* TAUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAUtils.h; sourceTree = "<group>"; };
 		A9E16FF807516EEA718B89300C06CB71 /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AC8CA361368537D2EC7F6F357D80EED7 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC8CA361368537D2EC7F6F357D80EED7 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD408FFB13D8CEA244CA34830FE6E9B6 /* TANotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TANotification.h; sourceTree = "<group>"; };
 		B3C194E9AAB8AD4CD5B553D572A2A0DD /* TaskAnalytics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TaskAnalytics.xcconfig; sourceTree = "<group>"; };
 		B51F71A50B772F105DD05F777AAEB5FC /* Pods-TaskAnalytics_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaskAnalytics_Tests-resources.sh"; sourceTree = "<group>"; };
 		B71304CBFE16CC1B1835892A3BF79016 /* Pods-TaskAnalytics_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaskAnalytics_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B875E327B635E36FEECEAA38D2E8717B /* Pods-TaskAnalytics_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaskAnalytics_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD2F318160E5016E8F6625E28249B7AF /* TAConsentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAConsentViewController.h; sourceTree = "<group>"; };
-		C050F490835D75D125DF0E565021B6D7 /* TaskAnalytics.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TaskAnalytics.modulemap; sourceTree = "<group>"; };
+		C050F490835D75D125DF0E565021B6D7 /* TaskAnalytics.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TaskAnalytics.modulemap; sourceTree = "<group>"; };
 		C2CBE6433E66554D4089F15C19D467DC /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
-		C53D28C4D141B22E189182C21BDCD641 /* TaskAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TaskAnalytics.framework; path = TaskAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C53D28C4D141B22E189182C21BDCD641 /* TaskAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TaskAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C580E140400B18EFBF906C40028ACFC5 /* Pods-TaskAnalytics_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaskAnalytics_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C6E19ABBA728CD9A5DDB3ABF333223E7 /* TALauncherViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TALauncherViewController.h; sourceTree = "<group>"; };
 		C8CDDCBE9BDC29CD52028938CA64F9AE /* TACaptureWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TACaptureWebViewController.m; sourceTree = "<group>"; };
 		E1302EE56F6AC0FDB8137341A2F38790 /* TaskAnalytics-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaskAnalytics-umbrella.h"; sourceTree = "<group>"; };
 		EC20D7CE2FCB0A1F131B1C037200B2F6 /* TAConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAConstants.h; sourceTree = "<group>"; };
-		EE2D21758692CC8603F4ABA1487314FE /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
+		EE2D21758692CC8603F4ABA1487314FE /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
 		EF0865A480CD66D9940F93689F06BACF /* TAConsentButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAConsentButton.h; sourceTree = "<group>"; };
 		F15845F0BE7780C3C54616B03AC5CB0B /* Pods-TaskAnalytics_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaskAnalytics_Tests-umbrella.h"; sourceTree = "<group>"; };
 		F62CEF513B5DAABC7A82EE9F33FCE060 /* TAConsent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAConsent.m; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				FD89F8D478DE37F6E16769EB7462AAF5 /* TANotification.m */,
 				A5B12EB65A1220C88B507E790DAA5732 /* TAUtils.h */,
 				105E87ED57B20EE10AC35104AD54F0C7 /* TAUtils.m */,
+				252180701FB49F0300636EB4 /* TAAvatar.h */,
+				252180711FB49F0300636EB4 /* TAAvatar.m */,
 			);
 			name = Classes;
 			path = TaskAnalytics/Classes;
@@ -317,6 +323,7 @@
 				502345CA306FF6A9815CA8A68E15AC64 /* TAConsentButton.h in Headers */,
 				8AE79EBA2F041DA991D566887561D8D7 /* TAConsentViewController.h in Headers */,
 				BBFBB17765C584F91352DC92167B1C13 /* TAConstants.h in Headers */,
+				252180721FB49F0300636EB4 /* TAAvatar.h in Headers */,
 				92BECE1AAFAB6B0ABEBB75D0919AF2FA /* TALauncherButton.h in Headers */,
 				3B557A2E7CF000B2AB3CD5A2DFA53C0C /* TALauncherViewController.h in Headers */,
 				708DF38C1D54CF4163B8BBAB1CE45FD0 /* TANotification.h in Headers */,
@@ -447,6 +454,7 @@
 				97D25D3A3CED3FA2FC038B9B57FD7FCB /* TALauncherButton.m in Sources */,
 				3276EC363AC5406211CF4E7E0C06AE1B /* TALauncherViewController.m in Sources */,
 				8A38B28FC708B8EA6066DAF7DB0C8EC8 /* TANotification.m in Sources */,
+				252180731FB49F0300636EB4 /* TAAvatar.m in Sources */,
 				68FB0FBA879D238FE942F4EB9AA6135B /* TaskAnalytics-dummy.m in Sources */,
 				B51EE3061A14F85246B7625147F0CFE1 /* TaskAnalytics.m in Sources */,
 				8C5548EF9B642FF9127096E63C3FFCEF /* TAUtils.m in Sources */,

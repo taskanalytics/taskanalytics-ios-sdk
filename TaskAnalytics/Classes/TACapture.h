@@ -15,4 +15,6 @@
 @property (nonatomic, strong, nonnull) NSString *title;
 @property (nonatomic, strong, nonnull) NSURL *url;
 
+- (id _Nullable)initWithDictionary:(NSDictionary* _Nonnull) dictionary;
+
 @end

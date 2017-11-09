@@ -10,16 +10,27 @@
 
 @implementation TAConsent
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
+- (id _Nullable)initWithDictionary:(NSDictionary* _Nonnull) dictionary{
+    
+    if (self = [super init]) {
+        
+        NSString* title = dictionary[@"title"];
+
         
         
+        if (title == nil){
+            
+            return nil;
+            
+        }
         
+        self.title = title;
         
     }
+    
+    
     return self;
+    
 }
 
 @end

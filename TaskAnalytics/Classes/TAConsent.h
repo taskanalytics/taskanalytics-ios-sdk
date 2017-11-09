@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong, nonnull) NSString * title;
 
+- (id _Nullable)initWithDictionary:(NSDictionary* _Nonnull) dictionary;
+
 @end

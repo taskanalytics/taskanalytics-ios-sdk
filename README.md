@@ -47,7 +47,7 @@ Configure the Task Analytics shared instance, typically in your application's ``
 The placements of buttons should be done at least once, preferably during setup. It is also possible to move the buttons later. 
 
 #### Consent button
-<div>
+
 <img src="./ta-consent-placement.jpg" alt="Consent button placement" width="300px" align="left">
 
 The consent button spans the full width of the screen. It can be placed in a vertical distance from the top or bottom edge.
@@ -59,11 +59,10 @@ The consent button spans the full width of the screen. It can be placed in a ver
 If you run this method after the consent button is displayed, it will animate into the new position. This way, can you move it if it obstructs important content in your app.
 
 When the user clicks on the consent button, a full screen modal view will be displayed where the user is asked to accept or decline the use of Task Analytics. The user can close the modal view without answering. In that case, the consent button remains in place.
-</div>
+---
 
 #### Launcher button
 
-<div>
 <img src="./ta-launcher-placement.jpg" alt="Launcher button placement" width="300px" align="left">
 
 
@@ -76,7 +75,7 @@ If you run this method after the consent button is displayed, it will animate in
 ```
 
 When the user clicks on the launcher button, a full screen modal view will be displayed where the user continues answering questions about their usage of your app. The user can close the modal view without answering. In that case, the launcher button remains in place.
-</div>
+---
 
 
 ### Show

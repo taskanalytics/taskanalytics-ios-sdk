@@ -271,6 +271,9 @@
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = schjonhaug;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 2DRXKSHA49;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -579,7 +582,7 @@
 			baseConfigurationReference = 00819A58E49D97AD060ADFDC /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2DRXKSHA49;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TaskAnalytics/TaskAnalytics-Prefix.pch";
 				INFOPLIST_FILE = "TaskAnalytics/TaskAnalytics-Info.plist";
@@ -595,7 +598,7 @@
 			baseConfigurationReference = 62CE8585FB4E00BC8F3031DE /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2DRXKSHA49;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TaskAnalytics/TaskAnalytics-Prefix.pch";
 				INFOPLIST_FILE = "TaskAnalytics/TaskAnalytics-Info.plist";

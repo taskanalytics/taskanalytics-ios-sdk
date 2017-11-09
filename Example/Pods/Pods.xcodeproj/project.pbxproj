@@ -11,6 +11,10 @@
 		162533C13FA81F664067B1EC490F485F /* TAConsentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7E1DAD39D9375B4685BAA522E36C0A /* TAConsentButton.m */; };
 		1ABB0A0818CC5FB5826999E75059A4A1 /* TALauncherButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5D949173CFE842199FEC6C68C0413D /* TALauncherButton.m */; };
 		210F7764E93B7C46AC8D1B2F62F1ED23 /* TANotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B868086D10BC493388F0D5AEF0D613C /* TANotification.m */; };
+		252180691FB496F800636EB4 /* TAConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 252180681FB496F800636EB4 /* TAConstants.h */; };
+		2521806B1FB4979E00636EB4 /* TAConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2521806A1FB4979E00636EB4 /* TAConstants.m */; };
+		253B49671FB4945D00D4B1B8 /* TAUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 253B49651FB4945D00D4B1B8 /* TAUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		253B49681FB4945D00D4B1B8 /* TAUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 253B49661FB4945D00D4B1B8 /* TAUtils.m */; };
 		27F29576EC50CDA13ADABCF68CD38AA7 /* Pods-TaskAnalytics_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F15845F0BE7780C3C54616B03AC5CB0B /* Pods-TaskAnalytics_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BE83FFFBC7D4078B461B66D3F69878B /* TANotification.h in Headers */ = {isa = PBXBuildFile; fileRef = FA582B8F6DAD990369C64AABE0FEDB9A /* TANotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F027A8382D6FEB6F9247B626F4AA127 /* TAConsentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DB7F89E0268D503314CD9314503171 /* TAConsentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,6 +59,10 @@
 		1F1687A92316D192C6C4AA6A75F4A567 /* Pods-TaskAnalytics_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaskAnalytics_Tests-dummy.m"; sourceTree = "<group>"; };
 		20C3DE2D7B20285FE5F2229C23DD6919 /* Pods-TaskAnalytics_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaskAnalytics_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		24DB7F89E0268D503314CD9314503171 /* TAConsentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAConsentViewController.h; sourceTree = "<group>"; };
+		252180681FB496F800636EB4 /* TAConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAConstants.h; sourceTree = "<group>"; };
+		2521806A1FB4979E00636EB4 /* TAConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAConstants.m; sourceTree = "<group>"; };
+		253B49651FB4945D00D4B1B8 /* TAUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAUtils.h; sourceTree = "<group>"; };
+		253B49661FB4945D00D4B1B8 /* TAUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAUtils.m; sourceTree = "<group>"; };
 		2FD14146AF8BA1529E8EF5C434DB9E59 /* TaskAnalytics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TaskAnalytics.xcconfig; sourceTree = "<group>"; };
 		40F8ACF08117BDF5A4C1377E3FD88C93 /* TaskAnalytics-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TaskAnalytics-dummy.m"; sourceTree = "<group>"; };
 		45DC4DD1F5D2A0A8D5A33E94DC29699C /* Pods-TaskAnalytics_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TaskAnalytics_Tests.modulemap"; sourceTree = "<group>"; };
@@ -126,9 +134,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		252180671FB496DF00636EB4 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				252180681FB496F800636EB4 /* TAConstants.h */,
+				2521806A1FB4979E00636EB4 /* TAConstants.m */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		3F096B39BDF94D4FDD6639B91306BD10 /* TaskAnalytics */ = {
 			isa = PBXGroup;
 			children = (
+				252180671FB496DF00636EB4 /* Headers */,
 				10308347720AFDAB7F3F624FB7B9336B /* TaskAnalytics.h */,
 				D95E3E74132A6C7A346A9890CF3D92BD /* TaskAnalytics.m */,
 				86D144CE6496CD9D85BB3BBDC76AC0F0 /* Classes */,
@@ -160,6 +178,8 @@
 				DA6CC04108BA60DEA36D3F5947BC6CE7 /* TAConsent.m */,
 				FA582B8F6DAD990369C64AABE0FEDB9A /* TANotification.h */,
 				1B868086D10BC493388F0D5AEF0D613C /* TANotification.m */,
+				253B49651FB4945D00D4B1B8 /* TAUtils.h */,
+				253B49661FB4945D00D4B1B8 /* TAUtils.m */,
 			);
 			name = Classes;
 			path = TaskAnalytics/Classes;
@@ -301,6 +321,7 @@
 			files = (
 				697CC39CB2DF60CCA608B52F8CA8E154 /* TACapture.h in Headers */,
 				689D77C761FCC65C344DA5A578C6C3A9 /* TACaptureWebViewController.h in Headers */,
+				252180691FB496F800636EB4 /* TAConstants.h in Headers */,
 				A31D91988CE55D3FD5458C628BE6089A /* TAConsent.h in Headers */,
 				FE43A0CDBF43AE3D6533D2C6280C9966 /* TAConsentButton.h in Headers */,
 				2F027A8382D6FEB6F9247B626F4AA127 /* TAConsentViewController.h in Headers */,
@@ -309,6 +330,7 @@
 				2BE83FFFBC7D4078B461B66D3F69878B /* TANotification.h in Headers */,
 				621E25FA8511F3B458E0897940F4274E /* TaskAnalytics-umbrella.h in Headers */,
 				C6410994215E5D7AF0B975EF659FAECD /* TaskAnalytics.h in Headers */,
+				253B49671FB4945D00D4B1B8 /* TAUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,10 +447,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9285096BFCA50CED24E812F131F29C49 /* TACapture.m in Sources */,
+				253B49681FB4945D00D4B1B8 /* TAUtils.m in Sources */,
 				61FBC187B1E87F1E03AC918C27885B25 /* TACaptureWebViewController.m in Sources */,
 				51FFDA67A24F0049CBD0C1471FC4B4CC /* TAConsent.m in Sources */,
 				162533C13FA81F664067B1EC490F485F /* TAConsentButton.m in Sources */,
 				3372763AF1EB2D00016996E2190DE3EA /* TAConsentViewController.m in Sources */,
+				2521806B1FB4979E00636EB4 /* TAConstants.m in Sources */,
 				1ABB0A0818CC5FB5826999E75059A4A1 /* TALauncherButton.m in Sources */,
 				72C9EF1DA06F5F0A7FC54F6B8055585E /* TALauncherViewController.m in Sources */,
 				210F7764E93B7C46AC8D1B2F62F1ED23 /* TANotification.m in Sources */,

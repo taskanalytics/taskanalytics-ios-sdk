@@ -38,7 +38,7 @@
     
     NSURL* url = [NSURL URLWithString:self.serverURLTextField.text];
     
-    TaskAnalytics.sharedInstance.serverURL = url;
+    TaskAnalytics.sharedInstance.baseURL = url;
     
 }
 

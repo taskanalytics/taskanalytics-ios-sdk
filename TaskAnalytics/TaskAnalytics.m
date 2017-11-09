@@ -16,14 +16,9 @@
 #import "TAConsent.h"
 #import "TANotification.h"
 
-#import <sys/utsname.h>
+#import "TAUtils.h"
+#import "TAConstants.h"
 
-
-NSString * _Nonnull const kTAUUID = @"TA-UUID";
-NSString * _Nonnull const kTAAvatarURL = @"TA-avatar-url";
-NSString * _Nonnull const kTAAvatarImageData = @"TA-avatar-image-data";
-NSString * _Nonnull const kTADateForParticiationDeclinedOrFinished = @"TA-date-for-participation-declined-or-finished";
-NSString * _Nonnull const kTALocalNotification = @"TALocalNotification";
 
 int const kTATriggerViewHeight = 64;
 int const kTADoneViewSize = 54;
@@ -76,15 +71,6 @@ int const kTADoneViewSize = 54;
 }
 
 
-NSString* deviceName(){
-    
-    struct utsname systemInfo;
-    uname(&systemInfo);
-    
-    return [NSString stringWithCString:systemInfo.machine
-                              encoding:NSUTF8StringEncoding];
-}
-
 #pragma mark - Public methods
 
 
@@ -113,38 +99,24 @@ NSString* deviceName(){
     }
     
     
-    NSURL* serverURL;
+    NSURL* baseURL;
     
-    if (self.serverURL != nil){
+    if (self.baseURL != nil){
         
-        serverURL = self.serverURL;
+        baseURL = self.baseURL;
         
     }
     else{
         
-        serverURL = [[NSURL URLWithString:@"http://ios-capture.taskanalytics.com/setup"] URLByAppendingPathComponent:ID];
+        baseURL = [[NSURL URLWithString:@"http://ios-capture.taskanalytics.com/setup"] URLByAppendingPathComponent:ID];
         //serverURL = [NSURL URLWithString:@"http://localhost:3000/db"]; //Debug
 
     }
-        
     
     
-    NSURLComponents* components = [NSURLComponents componentsWithURL:serverURL resolvingAgainstBaseURL:false];
     
-    //Create query items
+    NSURL* serverURL = [TAUtils setupURLWithBaseURL:baseURL];
     
-    NSString* device = deviceName();
-    NSString* os = [NSString stringWithFormat:@"%@ %@", UIDevice.currentDevice.systemName, UIDevice.currentDevice.systemVersion];
-    
-    
-    NSURLQueryItem* deviceQueryItem = [NSURLQueryItem queryItemWithName:@"device" value:device];
-    NSURLQueryItem* osQueryItem = [NSURLQueryItem queryItemWithName:@"os" value:os];
-    NSURLQueryItem* UUIDQueryItem = [NSURLQueryItem queryItemWithName:@"uuid" value:UUID];
-    
-    components.queryItems = @[deviceQueryItem, osQueryItem, UUIDQueryItem];
-    
-    
-    serverURL = [components URL];
     
     
     [self loadJSONFromServerURL:serverURL];

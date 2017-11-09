@@ -17,7 +17,6 @@ FOUNDATION_EXPORT const unsigned char TaskAnalyticsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <TaskAnalytics/PublicHeader.h>
 
-
 @protocol TaskAnalyticsDelegate<NSObject>
 
 @optional -(void)consentButtonPressed;
@@ -51,9 +50,9 @@ typedef NS_ENUM(NSInteger, TAEdge) {
 
 
 /**
- For debug purposes, you might want to provide a custom server URL.
+ For debug purposes, you might want to provide a custom base URL.
  */
-@property (nonatomic, strong) NSURL* _Nullable serverURL;
+@property (nonatomic, strong) NSURL* _Nullable baseURL;
 
 
 /**

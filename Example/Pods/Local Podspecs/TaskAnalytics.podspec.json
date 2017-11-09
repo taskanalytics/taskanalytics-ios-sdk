@@ -17,7 +17,7 @@
   },
   "social_media_url": "https://twitter.com/taskanalytics",
   "platforms": {
-    "ios": "10.0"
+    "ios": "9.0"
   },
   "source_files": "TaskAnalytics/**/*"
 }

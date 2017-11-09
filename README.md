@@ -48,9 +48,10 @@ The placements of buttons should be done at least once, preferably during setup.
 
 #### Consent button
 
-<img src="./ta-consent-placement.jpg" alt="Consent button placement" width="250px" align="left">
+<p align="left">
+  <img src="./ta-consent-placement.jpg" alt="Consent button placement" width="250px">
 
-The consent button spans the full width of the screen. It can be placed in a vertical distance from the top or bottom edge.
+  The consent button spans the full width of the screen. It can be placed in a vertical distance from the top or bottom edge.
 
 ```objective-c
 [TaskAnalytics.sharedInstance setConsentButtonVerticalDistance:(float)verticalDistance fromEdge:(TAEdge)edge];
@@ -59,6 +60,9 @@ The consent button spans the full width of the screen. It can be placed in a ver
 If you run this method after the consent button is displayed, it will animate into the new position. This way, can you move it if it obstructs important content in your app.
 
 When the user clicks on the consent button, a full screen modal view will be displayed where the user is asked to accept or decline the use of Task Analytics. The user can close the modal view without answering. In that case, the consent button remains in place.
+
+</p>
+
 
 
 #### Launcher button

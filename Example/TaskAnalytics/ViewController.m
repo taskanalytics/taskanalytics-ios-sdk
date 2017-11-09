@@ -178,4 +178,10 @@
     
 }
 
+-(void)captureDestroy{
+    
+    NSLog(@"Capture destroy");
+    
+}
+
 @end

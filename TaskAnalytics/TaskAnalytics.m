@@ -110,7 +110,7 @@ int const kTADoneViewSize = 54;
     else{
         
         serverURL = [[[NSURL URLWithString:@"http://ios-capture.taskanalytics.com/setup"] URLByAppendingPathComponent:ID] URLByAppendingPathComponent:UUID];
-        //Debug serverURL = [NSURL URLWithString:@"http://localhost:3000/db"];
+        //serverURL = [NSURL URLWithString:@"http://localhost:3000/db"]; //Debug 
         
     }
     
@@ -911,12 +911,21 @@ int const kTADoneViewSize = 54;
 
 
 - (void)captureFinished{
+
     
+    //Callback
+    if ([self.delegate respondsToSelector:(@selector(captureFinished))]){
+        [self.delegate captureFinished];
+    }
+}
+
+
+-(void)captureDestroy{
     
     [self setDateForParticiationDeclinedOrFinished];
-
+    
     _launcherViewController.view.hidden = true;
-
+    
     
     [_window.rootViewController dismissViewControllerAnimated:true completion:^{
         
@@ -927,11 +936,15 @@ int const kTADoneViewSize = 54;
     
     
     //Callback
-    if ([self.delegate respondsToSelector:(@selector(captureFinished))]){
-        [self.delegate captureFinished];
+    if ([self.delegate respondsToSelector:(@selector(captureDestroy))]){
+        [self.delegate captureDestroy];
     }
+    
+    
 }
 
+
+#pragma mark: Notifications
 
 - (void)applicationDidEnterBackground{
     

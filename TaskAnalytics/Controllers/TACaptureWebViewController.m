@@ -11,6 +11,7 @@
 @interface TACaptureWebViewController (){
     
     WKWebView *_webView;
+    BOOL isCaptureFinish;
 }
 
 @end
@@ -19,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    isCaptureFinish = false;
     
     self.title = self.captureTitle;
 
@@ -64,9 +67,18 @@
 
 - (void) closeButtonPressed:(id)sender{
     
-    [_webView evaluateJavaScript:@"onCaptureClose()" completionHandler:nil];
+    if (isCaptureFinish == true) {
+        
+        [self.delegate captureDestroy];
+        
+    }
+    else{
+        
+        [_webView evaluateJavaScript:@"onCaptureClose()" completionHandler:nil];
+        
+        [self.delegate closeButtonPressed];
     
-    [self.delegate closeButtonPressed];
+    }
     
 }
 
@@ -90,8 +102,15 @@
         }
         else if ([message.body isEqualToString:@"onCaptureFinish"]){
             
+            isCaptureFinish = true;
+            
             [self.delegate captureFinished];
 
+        }
+        else if ([message.body isEqualToString:@"onCaptureDestroy"]){
+            
+            [self.delegate captureDestroy];
+            
         }
     }
 }

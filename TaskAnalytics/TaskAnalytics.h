@@ -26,7 +26,7 @@ FOUNDATION_EXPORT const unsigned char TaskAnalyticsVersionString[];
 @optional -(void)consentAccepted;
 @optional -(void)consentDeclined;
 @optional -(void)captureFinished;
-
+@optional -(void)captureDestroy;
 
 @end
 

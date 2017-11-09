@@ -10,6 +10,15 @@
 #endif
 #endif
 
+#import "TACapture.h"
+#import "TAConsent.h"
+#import "TANotification.h"
+#import "TACaptureWebViewController.h"
+#import "TAConsentViewController.h"
+#import "TALauncherViewController.h"
+#import "TaskAnalytics.h"
+#import "TAConsentButton.h"
+#import "TALauncherButton.h"
 
 FOUNDATION_EXPORT double TaskAnalyticsVersionNumber;
 FOUNDATION_EXPORT const unsigned char TaskAnalyticsVersionString[];

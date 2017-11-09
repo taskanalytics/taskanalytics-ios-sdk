@@ -48,8 +48,7 @@ The placements of buttons should be done at least once, preferably during setup.
 
 #### Consent button
 
-<p align="left">
-  <img src="./ta-consent-placement.jpg" alt="Consent button placement" width="250px">
+<img src="./ta-consent-placement.jpg" alt="Consent button placement" width="250px">
 
   The consent button spans the full width of the screen. It can be placed in a vertical distance from the top or bottom edge.
 
@@ -61,13 +60,12 @@ If you run this method after the consent button is displayed, it will animate in
 
 When the user clicks on the consent button, a full screen modal view will be displayed where the user is asked to accept or decline the use of Task Analytics. The user can close the modal view without answering. In that case, the consent button remains in place.
 
-</p>
 
 
 
 #### Launcher button
 
-<img src="./ta-launcher-placement.jpg" alt="Launcher button placement" width="250px" align="left">
+<img src="./ta-launcher-placement.jpg" alt="Launcher button placement" width="250px">
 
 
 The launcher button is a round button showing your avatar. It can be placed a certain number of points on the horizontal and vertical distance from one of the four screen corners.

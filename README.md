@@ -48,7 +48,7 @@ The placements of buttons should be done at least once, preferably during setup.
 
 #### Consent button
 
-![Consent button placement](./ta-consent-placement.jpg)
+<img src="./ta-consent-placement.jpg" alt="Consent button placement" width="400px" style="float:left">>
 
 The consent button spans the full width of the screen. It can be placed in a vertical distance from the top or bottom edge.
 
@@ -63,7 +63,8 @@ When the user clicks on the consent button, a full screen modal view will be dis
 
 #### Launcher button
 
-![Launcher button placement](./ta-launcher-placement.jpg)
+<img src="./ta-launcher-placement.jpg" alt="Launcher button placement" width="300px" style="float:left">>
+
 
 The launcher button is a round button showing your avatar. It can be placed a certain number of points on the horizontal and vertical distance from one of the four screen corners.
 

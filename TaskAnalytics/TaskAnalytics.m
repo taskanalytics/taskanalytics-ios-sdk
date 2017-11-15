@@ -38,6 +38,7 @@ int const kTADoneViewSize = 54;
     TALauncherViewController* _launcherViewController;
     TACaptureWebViewController* _captureWebViewController;
 
+    UIWindow *_originalKeyWindow;
     UIWindow *_window;
     dispatch_semaphore_t _semaphore;
     
@@ -113,6 +114,7 @@ int const kTADoneViewSize = 54;
     else{
         
         setupURL = [[NSURL URLWithString:@"http://ios-capture.taskanalytics.com/setup"] URLByAppendingPathComponent:ID];
+        setupURL = [NSURL URLWithString:@"https://pacific-oasis-54671.herokuapp.com/db.json"];
         //setupURL = [NSURL URLWithString:@"http://localhost:3000/db"]; //Debug
 
     }
@@ -505,19 +507,18 @@ int const kTADoneViewSize = 54;
             
         }
         
-        
+        //Save a reference to the key window
+        _originalKeyWindow = UIApplication.sharedApplication.keyWindow;
         
         _window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kTATriggerViewHeight)];
         
+        _window.windowLevel = UIWindowLevelNormal;
         _window.backgroundColor = UIColor.clearColor;
         _window.rootViewController = _consentViewController;
         
-        
-        _window.hidden = false;
-        
-        
         [self moveConsentViewWithAnimation:false];
         
+        _window.hidden = false;
         
     }
     
@@ -733,6 +734,17 @@ int const kTADoneViewSize = 54;
     [NSUserDefaults.standardUserDefaults setObject:date forKey:kTADateForParticiationDeclinedOrFinished];
     [NSUserDefaults.standardUserDefaults synchronize];
     
+    
+}
+
+
+- (void)dismissCaptureWebViewController: (void (^)(void))completion{
+
+    //Make the original key window key again so that it will receive all keyboard events.
+    [_originalKeyWindow makeKeyWindow];
+    
+    [_window.rootViewController dismissViewControllerAnimated:true completion:completion];
+    
 }
 
 
@@ -762,9 +774,8 @@ int const kTADoneViewSize = 54;
         
         CGRect frame = _consentViewController.view.frame;
         
-        [_window.rootViewController dismissViewControllerAnimated:true completion:^{
-            
-            
+        [self dismissCaptureWebViewController:^{
+        
             _window.frame = frame;
             
             [UIView animateWithDuration:0.2 animations:^{
@@ -773,8 +784,8 @@ int const kTADoneViewSize = 54;
                 
             }];
             
-            
         }];
+        
         
     }
     else if (_window.rootViewController == _launcherViewController){
@@ -783,8 +794,8 @@ int const kTADoneViewSize = 54;
         
         CGRect frame = _launcherViewController.view.frame;
         
-        [_window.rootViewController dismissViewControllerAnimated:true completion:^{
-            
+        [self dismissCaptureWebViewController:^{
+        
             _window.frame = frame;
             
             [UIView animateWithDuration:0.2 animations:^{
@@ -793,8 +804,8 @@ int const kTADoneViewSize = 54;
                 
             }];
             
-            
         }];
+        
         
     }
     
@@ -857,7 +868,10 @@ int const kTADoneViewSize = 54;
         
     }
     
-    
+
+    //Make sure that we can receive keyboard events.
+    [_window makeKeyWindow];
+
     
     UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:_captureWebViewController];
     
@@ -881,13 +895,15 @@ int const kTADoneViewSize = 54;
     
     _consentGiven = true;
     
-    //Show done view
-    [_window.rootViewController dismissViewControllerAnimated:true completion:^{
-        
+    //Show launcher view
+    [self dismissCaptureWebViewController:^{
+
         [self showLauncherViewController];
         [self moveLauncherViewWithAnimation:false];
         
     }];
+    
+
     
     //Callback
     if ([self.delegate respondsToSelector:(@selector(consentAccepted))]){
@@ -909,6 +925,7 @@ int const kTADoneViewSize = 54;
     
     
     
+    
 }
 
 
@@ -918,12 +935,11 @@ int const kTADoneViewSize = 54;
     
     _consentViewController.view.hidden = true;
     
-    [_window.rootViewController dismissViewControllerAnimated:true completion:^{
+    [self dismissCaptureWebViewController:^{
        
         [self remove];
-        
+
     }];
-    
     
     
     //Callback
@@ -951,13 +967,10 @@ int const kTADoneViewSize = 54;
     
     _launcherViewController.view.hidden = true;
     
-    
-    [_window.rootViewController dismissViewControllerAnimated:true completion:^{
-        
+    [self dismissCaptureWebViewController:^{
         [self remove];
-        
+
     }];
-    
     
     
     //Callback

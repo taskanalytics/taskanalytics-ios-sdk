@@ -114,7 +114,7 @@ int const kTADoneViewSize = 54;
     else{
         
         setupURL = [[NSURL URLWithString:@"http://ios-capture.taskanalytics.com/setup"] URLByAppendingPathComponent:ID];
-        setupURL = [NSURL URLWithString:@"https://pacific-oasis-54671.herokuapp.com/db.json"];
+        //setupURL = [NSURL URLWithString:@"https://pacific-oasis-54671.herokuapp.com/db.json"];
         //setupURL = [NSURL URLWithString:@"http://localhost:3000/db"]; //Debug
 
     }

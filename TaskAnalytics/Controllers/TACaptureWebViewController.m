@@ -18,14 +18,30 @@
 
 @implementation TACaptureWebViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     isCaptureFinish = false;
     
     self.title = self.captureTitle;
-
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Lukk" style:UIBarButtonItemStylePlain target:self action:@selector(closeButtonPressed:)];
+    
+    NSURLRequest* urlRequest = [NSURLRequest requestWithURL:self.captureURL];
+
+    [_webView loadRequest:urlRequest];
+    
+    
+}
+
+
+- (void)loadView{
+    
+    [super loadView];
+    
+    // Do any additional setup after loading the view, typically from a nib.
     
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc]
                                              init];
@@ -38,27 +54,56 @@
     configuration.userContentController = controller;
     
     
+    
     // Initialize the WKWebView with the current frame and the configuration
     // setup above
-    _webView = [[WKWebView alloc] initWithFrame:self.view.frame
+    _webView = [[WKWebView alloc] initWithFrame:CGRectZero
                                   configuration:configuration];
     
-    // Load the URL into the WKWebView and then add it as a sub-view.
-    NSURLRequest* urlRequest = [NSURLRequest requestWithURL:self.captureURL];
-    [_webView loadRequest:urlRequest];
+    self.view = _webView;
     
-    [self.view addSubview:_webView];
-
 }
 
 
--(void)viewDidAppear:(BOOL)animated{
+
+- (void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
+    
     
     [_webView evaluateJavaScript:@"onCaptureOpen()" completionHandler:nil];
 
     
+    //Start listenening to keyboard notifications
+    
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    
+    [NSNotificationCenter.defaultCenter removeObserver:self];
+    
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification{
+ 
+    [_webView evaluateJavaScript:@"onKeyboardResize(0)" completionHandler:nil];
+    
+}
+
+-(void)keyboardWillChangeFrame:(NSNotification *)notification{
+    
+    NSDictionary *info = notification.userInfo;
+    NSValue *value = info[UIKeyboardFrameEndUserInfoKey];
+    
+    CGRect rawFrame = [value CGRectValue];
+    CGRect keyboardFrame = [self.view convertRect:rawFrame fromView:nil];
+    
+    NSString* javaScript = [NSString stringWithFormat:@"onKeyboardResize(%f)", keyboardFrame.size.height];
+    
+    [_webView evaluateJavaScript:javaScript completionHandler:nil];
+
 }
 
 

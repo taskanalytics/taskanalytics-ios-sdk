@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'TaskAnalytics'
   s.version          = '1.0.0'
-  s.summary          = 'A short description of TaskAnalytics.'
+  s.summary          = 'Task Analytics captures and analyzes the intent of your customers and the outcome of their engagement with your business.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Task Analytics captures and analyzes the intent of your customers and the outcome of their engagement with your business.
                        DESC
 
   s.homepage         = 'https://github.com/taskanalytics/taskanalytics-ios-sdk'

@@ -1,8 +1,8 @@
 {
   "name": "TaskAnalytics",
   "version": "1.0.0",
-  "summary": "A short description of TaskAnalytics.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "Task Analytics captures and analyzes the intent of your customers and the outcome of their engagement with your business.",
+  "description": "Task Analytics captures and analyzes the intent of your customers and the outcome of their engagement with your business.",
   "homepage": "https://github.com/taskanalytics/taskanalytics-ios-sdk",
   "license": {
     "type": "MIT",

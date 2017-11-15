@@ -10,14 +10,15 @@
 #endif
 #endif
 
-#import "TACapture.h"
-#import "TAConsent.h"
 #import "TAConstants.h"
-#import "TANotification.h"
 #import "TAUtils.h"
 #import "TACaptureWebViewController.h"
 #import "TAConsentViewController.h"
 #import "TALauncherViewController.h"
+#import "TAAvatar.h"
+#import "TACapture.h"
+#import "TAConsent.h"
+#import "TANotification.h"
 #import "TaskAnalytics.h"
 #import "TAConsentButton.h"
 #import "TALauncherButton.h"

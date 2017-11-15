@@ -53,7 +53,7 @@ typedef NS_ENUM(NSInteger, TAEdge) {
 /**
  For debug purposes, you might want to provide a custom base URL.
  */
-@property (nonatomic, strong) NSURL* _Nullable baseURL;
+@property (nonatomic, strong) NSURL* _Nullable setupURL;
 
 
 /**

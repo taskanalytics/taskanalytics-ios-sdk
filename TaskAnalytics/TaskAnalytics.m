@@ -103,27 +103,23 @@ int const kTADoneViewSize = 54;
     }
     
     
-    NSURL* baseURL;
+    NSURL* setupURL;
     
-    if (self.baseURL != nil){
+    if (self.setupURL != nil){
         
-        baseURL = self.baseURL;
+        setupURL = self.setupURL;
         
     }
     else{
         
-        baseURL = [[NSURL URLWithString:@"http://ios-capture.taskanalytics.com/setup"] URLByAppendingPathComponent:ID];
-        //baseURL = [NSURL URLWithString:@"http://localhost:3000/db"]; //Debug
+        setupURL = [[NSURL URLWithString:@"http://ios-capture.taskanalytics.com/setup"] URLByAppendingPathComponent:ID];
+        //setupURL = [NSURL URLWithString:@"http://localhost:3000/db"]; //Debug
 
     }
     
+    setupURL = [TAUtils setupURLWithURL:setupURL];
     
-    
-    NSURL* serverURL = [TAUtils setupURLWithBaseURL:baseURL];
-    
-    
-    
-    [self loadJSONFromServerURL:serverURL];
+    [self loadJSONFromSetupURL:setupURL];
     
     
 }
@@ -308,7 +304,7 @@ int const kTADoneViewSize = 54;
 
 
 
-- (void)loadJSONFromServerURL:(NSURL *)serverURL {
+- (void)loadJSONFromSetupURL:(NSURL *)serverURL {
     
     
     _semaphore = dispatch_semaphore_create(0);
@@ -406,8 +402,12 @@ int const kTADoneViewSize = 54;
         _captureWebViewController = [[TACaptureWebViewController alloc] init];
         
         _captureWebViewController.delegate = self;
-        _captureWebViewController.captureURL = _capture.url;
         _captureWebViewController.captureTitle = _capture.title;
+        
+        //Setting up capture URL
+        NSURL* captureURL = [TAUtils captureURLWithURL:_capture.url];
+        _captureWebViewController.captureURL = captureURL;
+        
         
         //Preload the capture URL
         [_captureWebViewController.view setNeedsLayout];

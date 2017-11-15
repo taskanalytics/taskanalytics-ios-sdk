@@ -18,7 +18,8 @@ typedef NS_ENUM(NSInteger, TAErrorType) {
 
 @interface TAUtils : NSObject
 
-+ (NSURL*)setupURLWithBaseURL: (NSURL*) baseURL;
++ (NSURL*)setupURLWithURL: (NSURL*) URL;
++ (NSURL*)captureURLWithURL: (NSURL*) URL;
 + (NSError*)errorWithErrorType:(TAErrorType) errorType;
 
 @end

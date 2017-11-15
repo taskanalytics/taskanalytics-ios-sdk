@@ -22,23 +22,38 @@ NSString* deviceName(){
                               encoding:NSUTF8StringEncoding];
 }
 
-+ (NSURL*)setupURLWithBaseURL: (NSURL*) baseURL{
++ (NSURL*)setupURLWithURL: (NSURL*) URL{
     
     
-    NSURLComponents* components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:false];
+    NSURLComponents* components = [NSURLComponents componentsWithURL:URL resolvingAgainstBaseURL:false];
+    
+    //Create query items
+    
+    NSString* UUID = [NSUserDefaults.standardUserDefaults stringForKey:kTAUUID];
+    
+    NSURLQueryItem* UUIDQueryItem = [NSURLQueryItem queryItemWithName:@"uuid" value:UUID];
+    
+    components.queryItems = @[UUIDQueryItem];
+    
+    return [components URL];
+    
+}
+
++ (NSURL*)captureURLWithURL: (NSURL*) URL{
+    
+    
+    NSURLComponents* components = [NSURLComponents componentsWithURL:URL resolvingAgainstBaseURL:false];
     
     //Create query items
     
     NSString* device = deviceName();
     NSString* os = [NSString stringWithFormat:@"%@ %@", UIDevice.currentDevice.systemName, UIDevice.currentDevice.systemVersion];
-    NSString* UUID = [NSUserDefaults.standardUserDefaults stringForKey:kTAUUID];
 
     
     NSURLQueryItem* deviceQueryItem = [NSURLQueryItem queryItemWithName:@"device" value:device];
     NSURLQueryItem* osQueryItem = [NSURLQueryItem queryItemWithName:@"os" value:os];
-    NSURLQueryItem* UUIDQueryItem = [NSURLQueryItem queryItemWithName:@"uuid" value:UUID];
     
-    components.queryItems = @[deviceQueryItem, osQueryItem, UUIDQueryItem];
+    components.queryItems = @[deviceQueryItem, osQueryItem];
     
     
     return [components URL];

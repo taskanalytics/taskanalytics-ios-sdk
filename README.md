@@ -8,7 +8,7 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+An example project is included. Clone the repo, and run `pod install` from the `Example` directory. Then, open `TaskAnalytics.xcworkspace` and run the project.
 
 ## Requirements
 

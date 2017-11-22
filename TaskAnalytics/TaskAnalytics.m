@@ -411,9 +411,6 @@ int const kTADoneViewSize = 54;
         _captureWebViewController.captureURL = captureURL;
         
         
-        //Preload the capture URL
-        [_captureWebViewController.view setNeedsLayout];
-        
         ///////////////////////////
         // Download avatar image //
         ///////////////////////////
@@ -833,13 +830,14 @@ int const kTADoneViewSize = 54;
 
 - (void)showWebViewControllerAnimated:(BOOL)animated{
     
+    //Make sure that we can receive keyboard events.
+    [_window makeKeyWindow];
     
     
     //Show the web view
     
     //First, we need to create a new frame for the consent and/or launcher view where it's positioned correctly within a full screen view
 
-    
     
     //Set the window to full screen
     
@@ -869,8 +867,7 @@ int const kTADoneViewSize = 54;
     }
     
 
-    //Make sure that we can receive keyboard events.
-    [_window makeKeyWindow];
+
 
     
     UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:_captureWebViewController];

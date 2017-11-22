@@ -60,12 +60,13 @@
     }];
     
     okAction.enabled = false;
-    
     [alertController addAction:okAction];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
     
     
     [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        
+        textField.keyboardType = UIKeyboardTypeNumberPad;
         
         [NSNotificationCenter.defaultCenter addObserverForName:UITextFieldTextDidChangeNotification object:textField queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
             

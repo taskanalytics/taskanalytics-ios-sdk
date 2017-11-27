@@ -588,7 +588,7 @@ int const kTADoneViewSize = 54;
             _window.layer.mask = maskLayer;
             
             
-            [UIView animateWithDuration:0.2 delay:0 usingSpringWithDamping:0.75 initialSpringVelocity:0.75 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            [UIView animateWithDuration:1 delay:0 usingSpringWithDamping:0.9 initialSpringVelocity:0.9 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                 
                 _consentViewController.view.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
 
@@ -706,7 +706,7 @@ int const kTADoneViewSize = 54;
             _window.frame = frame;
             _window.transform = CGAffineTransformMakeScale(0, 0);
             
-            [UIView animateWithDuration:0.2 delay:0 usingSpringWithDamping:0.75 initialSpringVelocity:0.75 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            [UIView animateWithDuration:1 delay:0.5 usingSpringWithDamping:0.75 initialSpringVelocity:0.75 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                 
                 _window.transform = CGAffineTransformMakeScale(1, 1);
 

@@ -9,7 +9,6 @@
 #import "TAConstants.h"
 
 
-NSString * const PREFS_MY_CONSTANT = @"prefs_my_constant";
 NSString * const kTAUUID = @"TA-UUID";
 NSString * const kTAAvatarURL = @"TA-avatar-url";
 NSString * const kTAAvatarImageData = @"TA-avatar-image-data";

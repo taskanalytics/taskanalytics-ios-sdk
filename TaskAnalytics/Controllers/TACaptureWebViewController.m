@@ -11,7 +11,8 @@
 @interface TACaptureWebViewController (){
     
     WKWebView *_webView;
-    BOOL isCaptureFinish;
+    BOOL _isCaptureFinish;
+    UIActivityIndicatorView* _activityIndicatorView;
 }
 
 @end
@@ -23,7 +24,7 @@
     [super viewDidLoad];
     
     
-    isCaptureFinish = false;
+    _isCaptureFinish = false;
     
     self.title = self.captureTitle;
     
@@ -60,7 +61,22 @@
     _webView = [[WKWebView alloc] initWithFrame:CGRectZero
                                   configuration:configuration];
     
+    _webView.navigationDelegate = self;
+    
     self.view = _webView;
+    
+    //Add UIActivityIndicatorView
+    
+    _activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    
+    _activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false;
+    
+    [self.view addSubview:_activityIndicatorView];
+
+    [_activityIndicatorView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = true;
+    [_activityIndicatorView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = true;
+
+    [_activityIndicatorView startAnimating];
     
 }
 
@@ -112,7 +128,7 @@
 
 - (void) closeButtonPressed:(id)sender{
     
-    if (isCaptureFinish == true) {
+    if (_isCaptureFinish == true) {
         
         [self.delegate captureDestroyed];
         
@@ -147,7 +163,7 @@
         }
         else if ([message.body isEqualToString:@"onCaptureFinish"]){
             
-            isCaptureFinish = true;
+            _isCaptureFinish = true;
             
             [self.delegate captureFinished];
 
@@ -159,5 +175,19 @@
         }
     }
 }
+
+#pragma mark - WKNavigationDelegate
+
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+    
+    NSLog(@"REMVOE");
+    
+    //Remove the activity indicator
+    
+    [_activityIndicatorView removeFromSuperview];
+    _activityIndicatorView = nil;
+    
+}
+
 
 @end

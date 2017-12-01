@@ -11,7 +11,7 @@
 
 @import WebKit;
 
-@interface TACaptureWebViewController : UIViewController<WKScriptMessageHandler>
+@interface TACaptureWebViewController : UIViewController
 
 @property (nonatomic, weak) id <TaskAnalyticsDelegate>delegate;
 @property (nonatomic, strong) NSURL* captureURL;

@@ -17,7 +17,7 @@ FOUNDATION_EXPORT const unsigned char TaskAnalyticsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <TaskAnalytics/PublicHeader.h>
 
-@protocol TaskAnalyticsDelegate<NSObject>
+@protocol TaskAnalyticsDelegate <NSObject>
 
 @optional -(void)consentButtonPressed;
 @optional -(void)closeButtonPressed;

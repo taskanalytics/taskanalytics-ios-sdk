@@ -8,7 +8,7 @@
 
 #import "TACaptureWebViewController.h"
 
-@interface TACaptureWebViewController (){
+@interface TACaptureWebViewController()<WKNavigationDelegate, WKScriptMessageHandler>{
     
     WKWebView *_webView;
     BOOL _isCaptureFinish;

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'TaskAnalytics'
   s.version          = '1.0.0'
-  s.summary          = 'Task Analytics captures and analyzes the intent of your customers and the outcome of their engagement with your business.'
+  s.summary          = 'The natural next evolution in digital analytics.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

@@ -97,6 +97,14 @@ If you have views in your app where you don't want to show Task Analytics, you c
 [TaskAnalytics.sharedInstance hide];
 ```
 
+### Reset all settings when testing
+
+When testing the SDK, you might run in to ```Wait to collect again``` when running setup since Task Analytics waits a certain amount of time after the user has completed or declined a survey. Thus, for debug and testing purposes, you might want to reset all settings.
+
+```objective-c
+[TaskAnalytics.sharedInstance reset];
+```
+
 
 ## Callbacks
 
